@@ -8,7 +8,8 @@ export const DEMO_DATA=[
         category:"DH",
         plannigLeader:"fellipo inzaghi",
         userLeader:"andrea pirlo",
-        crew:"R01B"
+        crew:"R01B",
+        parada:"BNI MHAMED PHARMACIE AL HORIA"
     },
     {
         matricule:5586,
@@ -17,7 +18,8 @@ export const DEMO_DATA=[
         category:"DH",
         plannigLeader:"fellipo inzaghi",
         userLeader:"andrea pirlo",
-        crew:"R01B"
+        crew:"R01B",
+        parada:"BNI MHAMED PHARMACIE AL HORIA"
     },
     {
         matricule:7200,
@@ -26,7 +28,8 @@ export const DEMO_DATA=[
         category:"DH",
         plannigLeader:"fellipo inzaghi",
         userLeader:"andrea pirlo",
-        crew:"R01B"
+        crew:"R01B",
+        parada:"BNI MHAMED PHARMACIE AL HORIA"
     },
     {
         matricule:7575,
@@ -35,7 +38,8 @@ export const DEMO_DATA=[
         category:"DH",
         plannigLeader:"fellipo inzaghi",
         userLeader:"andrea pirlo",
-        crew:"R01B"
+        crew:"R01B",
+        parada:"OUISLANE PHARMACIE AL HIKMA"
     },
     {
         matricule:6738,
@@ -44,7 +48,8 @@ export const DEMO_DATA=[
         category:"DH",
         plannigLeader:"fellipo inzaghi",
         userLeader:"andrea pirlo",
-        crew:"R01B"
+        crew:"R01B",
+        parada:"OUISLANE PHARMACIE AL HIKMA"
     },
     {
         matricule:7866,
@@ -53,7 +58,8 @@ export const DEMO_DATA=[
         category:"DH",
         plannigLeader:"fellipo inzaghi",
         userLeader:"andrea pirlo",
-        crew:"R01B"
+        crew:"R01B",
+        parada:"DOWAR JBALA BARID BANK"
     },
     {
         matricule:5789,
@@ -62,7 +68,8 @@ export const DEMO_DATA=[
         category:"DH",
         plannigLeader:"fellipo inzaghi",
         userLeader:"andrea pirlo",
-        crew:"R01B"
+        crew:"R01B",
+        parada:"DOWAR JBALA BARID BANK"
     },
     {
         matricule:7868,
@@ -71,7 +78,8 @@ export const DEMO_DATA=[
         category:"DH",
         plannigLeader:"fellipo inzaghi",
         userLeader:"andrea pirlo",
-        crew:"R01B"
+        crew:"R01B",
+        parada:"NAIM CAFE SARAHA"
     },
     {
         matricule:4927,
@@ -80,7 +88,8 @@ export const DEMO_DATA=[
         category:"DH",
         plannigLeader:"fellipo inzaghi",
         userLeader:"andrea pirlo",
-        crew:"R01B"
+        crew:"R01B",
+        parada:"NAIM CAFE SARAHA"
     },
     {
         matricule:3792,
@@ -89,7 +98,8 @@ export const DEMO_DATA=[
         category:"DH",
         plannigLeader:"fellipo inzaghi",
         userLeader:"andrea pirlo",
-        crew:"R01B"
+        crew:"R01B",
+        parada:"NAIM CAFE SARAHA"
     },
     {
         matricule:627,
@@ -98,7 +108,8 @@ export const DEMO_DATA=[
         category:"DH",
         plannigLeader:"fellipo inzaghi",
         userLeader:"andrea pirlo",
-        crew:"R01B"
+        crew:"R01B",
+        parada:"NAIM CAFE SARAHA"
     },
     {
         matricule:203,
@@ -107,7 +118,8 @@ export const DEMO_DATA=[
         category:"DH",
         plannigLeader:"fellipo inzaghi",
         userLeader:"andrea pirlo",
-        crew:"R01B"
+        crew:"R01B",
+        parada:"ANASI CAFE PRESTIGE"
     },
     {
         matricule:6020,
@@ -116,7 +128,8 @@ export const DEMO_DATA=[
         category:"DH",
         plannigLeader:"fellipo inzaghi",
         userLeader:"andrea pirlo",
-        crew:"R01B"
+        crew:"R01B",
+        parada:"ANASI CAFE PRESTIGE"
     },
     {
         matricule:3902,
@@ -125,7 +138,8 @@ export const DEMO_DATA=[
         category:"DH",
         plannigLeader:"fellipo inzaghi",
         userLeader:"andrea pirlo",
-        crew:"R01B"
+        crew:"R01B",
+        parada:"ANASI CAFE PRESTIGE"
     },
     {
         matricule:3302,
@@ -134,7 +148,8 @@ export const DEMO_DATA=[
         category:"DH",
         plannigLeader:"fellipo inzaghi",
         userLeader:"andrea pirlo",
-        crew:"R01B"
+        crew:"R01B",
+        parada:"OUISLANE DAR CHABAB BMCE"
     },
     {
         matricule:8029,
@@ -143,7 +158,8 @@ export const DEMO_DATA=[
         category:"DH",
         plannigLeader:"fellipo inzaghi",
         userLeader:"andrea pirlo",
-        crew:"R01B"
+        crew:"R01B",
+        parada:"OUISLANE DAR CHABAB BMCE"
     },
     {
         matricule:9037,
@@ -152,7 +168,8 @@ export const DEMO_DATA=[
         category:"DH",
         plannigLeader:"fellipo inzaghi",
         userLeader:"andrea pirlo",
-        crew:"R01B"
+        crew:"R01B",
+        parada:"BOUFAKRANE PHARMACIE BOUFAKRANE"
     },
     {
         matricule:8092,
@@ -161,7 +178,8 @@ export const DEMO_DATA=[
         category:"DH",
         plannigLeader:"fellipo inzaghi",
         userLeader:"andrea pirlo",
-        crew:"R01B"
+        crew:"R01B",
+        parada:"BOUFAKRANE PHARMACIE BOUFAKRANE"
     },
     {
         matricule:221,
@@ -170,7 +188,8 @@ export const DEMO_DATA=[
         category:"DH",
         plannigLeader:"fellipo inzaghi",
         userLeader:"andrea pirlo",
-        crew:"R01B"
+        crew:"R01B",
+        parada:"BOUFAKRANE PHARMACIE BOUFAKRANE"
     },
     {
         matricule:7218,
@@ -179,7 +198,8 @@ export const DEMO_DATA=[
         category:"DH",
         plannigLeader:"fellipo inzaghi",
         userLeader:"andrea pirlo",
-        crew:"R01B"
+        crew:"R01B",
+        parada:"OUISLANE MAJD PHARMACIE ASRAR ASIHA"
     },
     {
         matricule:880,
@@ -189,7 +209,7 @@ export const DEMO_DATA=[
         plannigLeader:"fellipo inzaghi",
         userLeader:"andrea pirlo",
         crew:"K01A",
-        parada:""
+        parada:"BOUFAKRANE CAFE WAD BOUFAKRANE"
     },
     {
         matricule:211,
@@ -199,7 +219,7 @@ export const DEMO_DATA=[
         plannigLeader:"fellipo inzaghi",
         userLeader:"andrea pirlo",
         crew:"K01A",
-        parada:""
+        parada:"BOUFAKRANE CAFE WAD BOUFAKRANE"
     },
     {
         matricule:7778,
@@ -209,7 +229,7 @@ export const DEMO_DATA=[
         plannigLeader:"fellipo inzaghi",
         userLeader:"andrea pirlo",
         crew:"K01A",
-        parada:""
+        parada:"OUISLANE HAY NASR CAFE ASAFI"
     },
     {
         matricule:5563,
@@ -219,77 +239,77 @@ export const DEMO_DATA=[
         plannigLeader:"fellipo inzaghi",
         userLeader:"andrea pirlo",
         crew:"K01A",
-        parada:""
+        parada:"OUISLANE HAY NASR CAFE ASAFI"
     },
     {
-        matricule:,
-        name:"",
-        lastName:"",
+        matricule:61,
+        name:"BELKHAYAT",
+        lastName:"ABDELWAHAB",
         category:"DH",
         plannigLeader:"fellipo inzaghi",
         userLeader:"andrea pirlo",
         crew:"K01A",
-        parada:""
+        parada:"OUISLANE HAY NASR CAFE ASAFI"
     },
     {
-        matricule:,
-        name:"",
-        lastName:"",
+        matricule:3721,
+        name:"ZEMMAHI",
+        lastName:"SIHAM",
         category:"DH",
         plannigLeader:"fellipo inzaghi",
         userLeader:"andrea pirlo",
         crew:"K01A",
-        parada:""
+        parada:"MARJANE USINE YOURA"
     },
     {
-        matricule:,
-        name:"",
-        lastName:"",
+        matricule:2201,
+        name:"HALBAJ",
+        lastName:"MOHAMED",
         category:"DH",
         plannigLeader:"fellipo inzaghi",
         userLeader:"andrea pirlo",
         crew:"K01A",
-        parada:""
+        parada:"MARJANE USINE YOURA"
     },
     {
-        matricule:,
-        name:"",
-        lastName:"",
+        matricule:2001,
+        name:"WARDI",
+        lastName:"FATIMA ZAHRA",
         category:"DH",
         plannigLeader:"fellipo inzaghi",
         userLeader:"andrea pirlo",
         crew:"K01A",
-        parada:""
+        parada:"MARJANE USINE YOURA"
     },
     {
-        matricule:,
-        name:"",
-        lastName:"",
+        matricule:6001,
+        name:"OUDADA",
+        lastName:"AMAL",
         category:"DH",
         plannigLeader:"fellipo inzaghi",
         userLeader:"andrea pirlo",
         crew:"K01A",
-        parada:""
+        parada:"SEBATA NIYABA"
     },
     {
-        matricule:,
-        name:"",
-        lastName:"",
+        matricule:3009,
+        name:"NASRY",
+        lastName:"KHAWLA",
         category:"DH",
         plannigLeader:"fellipo inzaghi",
         userLeader:"andrea pirlo",
         crew:"K01A",
-        parada:""
+        parada:"SEBATA NIYABA"
     },
     {
-        matricule:,
-        name:"",
-        lastName:"",
+        matricule:4093,
+        name:"BATAS",
+        lastName:"HASSAN",
         category:"DH",
         plannigLeader:"fellipo inzaghi",
         userLeader:"andrea pirlo",
         crew:"K01A",
-        parada:""
+        parada:"AGDAL TAXI"
     },
 
 ]
