@@ -1,15 +1,34 @@
 
+import { useState } from "react";
 import c from "./CrewIndiData.module.css";
 
 
 const CrewIndiData = (p) => {
   console.log("ddd", p.data)
+    const [data, setData]=useState(p.data.status=== "crews" && p.data.data[0].employee);
+    const [inputValue, setInputValue] = useState('');
+    const changeHandler=e=>{
+      console.log(e.target.value, data)
+        setData(p.data.data[0].employee)
+        const value = e.target.value;
+    if (/^\d*$/.test(value)) {
+      setInputValue(value);
+      if(e.target.value.trim()!==""){
+        setData(prev=> Array.from(prev).filter(obj => String(obj["matricule"]).includes(e.target.value)));
+      }
+    }
+        
+      
+    }
   return (
     <div className={c.holder}>
       <h1 className={c.title} >{p.data.name} Details </h1>
-      <table className={c.table}>
+      {
+        p.data.status=== "crews"&&<input className={c.input} type="text" placeholder="Search by Matricule" value={inputValue} pattern="[0-9]*" onChange={changeHandler}/>
+      }
+      <table className={`${c.table}`}>
         <thead>
-          <tr>
+          <tr style={{backgroundColor:"#761904"}}>
             <th>Matricule</th>
             <th>first Name</th>
             <th>last name</th>
@@ -23,17 +42,27 @@ const CrewIndiData = (p) => {
         </thead>
         <tbody>
         {
-          p.data.status=== "crews" ? p.data.data[0].employee.map((m, i)=><tr key={i}>
+          p.data.status=== "crews" ? data.map((m, i)=><tr key={i}>
             <td>{m.matricule}</td>
             <td>{m.lastName}</td>
             <td>{m.name}</td>
             <td>{m.category}</td>
             <td>{m.crew}</td>
             <td>{m.plannigLeader}</td>
-            <td>{m.userLeader}</td>
-            <td>{m.parada}</td>
-            <td>status</td>
-          </tr>) :''
+            <td className={c.spec}>{m.userLeader}</td>
+            <td className={c.spec}>{m.parada}</td>
+            <td className={c.spec}>status</td>
+          </tr>) :p.data.data.map((m, i)=><tr key={i}>
+            <td>{m.matricule}</td>
+            <td>{m.lastName}</td>
+            <td>{m.name}</td>
+            <td>{m.category}</td>
+            <td>{m.crew}</td>
+            <td>{m.plannigLeader}</td>
+            <td className={c.spec}>{m.userLeader}</td>
+            <td className={c.spec}>{m.parada}</td>
+            <td className={c.spec}>status</td>
+          </tr>)
         }
         </tbody>
       </table>
