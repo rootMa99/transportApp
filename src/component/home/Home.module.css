@@ -41,4 +41,13 @@
     white-space: nowrap;
 }
 
-
+.content{
+    margin-top: 2rem;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 20rem;
+}
