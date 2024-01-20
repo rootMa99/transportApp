@@ -8,6 +8,11 @@ const Crews = (p) => {
   console.log(data);
     const ClickHandler =name=>{
         console.log(name)
+        if(p.title === "crews"){
+          p.setDataSelected(data.filter(f=>f.crewName===name), p.title, name);
+        }else{
+          p.setDataSelected(data.filter(f=>f.matricule===name), p.title, name);
+        }
     }
   return (
     <div className={c.crewHolder}>

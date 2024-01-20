@@ -6,7 +6,7 @@ export const DEMO_DATA=[
         name:"ES SAKALI",
         lastName:"MOHAMED",
         category:"DH",
-        plannigLeader:"fellipo inzaghi",
+        plannigLeader:"filippo inzaghi",
         userLeader:"andrea pirlo",
         crew:"R01C",
         parada:"BNI MHAMED PHARMACIE AL HORIA"
@@ -16,7 +16,7 @@ export const DEMO_DATA=[
         name:"BOUSSAKLA",
         lastName:"RIDA",
         category:"DH",
-        plannigLeader:"fellipo inzaghi",
+        plannigLeader:"filippo inzaghi",
         userLeader:"andrea pirlo",
         crew:"R01B",
         parada:"BNI MHAMED PHARMACIE AL HORIA"
@@ -26,7 +26,7 @@ export const DEMO_DATA=[
         name:"LOTFI",
         lastName:"DRISS",
         category:"DH",
-        plannigLeader:"fellipo inzaghi",
+        plannigLeader:"filippo inzaghi",
         userLeader:"andrea pirlo",
         crew:"R01B",
         parada:"BNI MHAMED PHARMACIE AL HORIA"
@@ -36,7 +36,7 @@ export const DEMO_DATA=[
         name:"ABDLHAK",
         lastName:"MOUJAHID",
         category:"DH",
-        plannigLeader:"fellipo inzaghi",
+        plannigLeader:"filippo inzaghi",
         userLeader:"andrea pirlo",
         crew:"R01B",
         parada:"OUISLANE PHARMACIE AL HIKMA"
@@ -46,7 +46,7 @@ export const DEMO_DATA=[
         name:"ECHACHA",
         lastName:"TARIK",
         category:"DH",
-        plannigLeader:"fellipo inzaghi",
+        plannigLeader:"filippo inzaghi",
         userLeader:"andrea pirlo",
         crew:"R01B",
         parada:"OUISLANE PHARMACIE AL HIKMA"
@@ -56,7 +56,7 @@ export const DEMO_DATA=[
         name:"LAANAYA",
         lastName:"KHAOULA",
         category:"DH",
-        plannigLeader:"fellipo inzaghi",
+        plannigLeader:"filippo inzaghi",
         userLeader:"andrea pirlo",
         crew:"R01C",
         parada:"DOWAR JBALA BARID BANK"
@@ -66,7 +66,7 @@ export const DEMO_DATA=[
         name:"SALMI",
         lastName:"ZINEB",
         category:"DH",
-        plannigLeader:"fellipo inzaghi",
+        plannigLeader:"filippo inzaghi",
         userLeader:"andrea pirlo",
         crew:"R01C",
         parada:"DOWAR JBALA BARID BANK"
@@ -76,7 +76,7 @@ export const DEMO_DATA=[
         name:"DIAB",
         lastName:"AMINE",
         category:"DH",
-        plannigLeader:"fellipo inzaghi",
+        plannigLeader:"filippo inzaghi",
         userLeader:"andrea pirlo",
         crew:"R01C",
         parada:"NAIM CAFE SARAHA"
@@ -86,7 +86,7 @@ export const DEMO_DATA=[
         name:"HAMDNI",
         lastName:"FATIMA",
         category:"DH",
-        plannigLeader:"fellipo inzaghi",
+        plannigLeader:"filippo inzaghi",
         userLeader:"andrea pirlo",
         crew:"R01B",
         parada:"NAIM CAFE SARAHA"
@@ -96,7 +96,7 @@ export const DEMO_DATA=[
         name:"SLASSI",
         lastName:"MOHAMMED",
         category:"DH",
-        plannigLeader:"fellipo inzaghi",
+        plannigLeader:"filippo inzaghi",
         userLeader:"andrea pirlo",
         crew:"R03B",
         parada:"NAIM CAFE SARAHA"
@@ -106,7 +106,7 @@ export const DEMO_DATA=[
         name:"SIFI",
         lastName:"YOUSSEF",
         category:"DH",
-        plannigLeader:"fellipo inzaghi",
+        plannigLeader:"filippo inzaghi",
         userLeader:"andrea pirlo",
         crew:"R07B",
         parada:"NAIM CAFE SARAHA"
@@ -116,7 +116,7 @@ export const DEMO_DATA=[
         name:"LAKHDAR",
         lastName:"SOUFIAN",
         category:"DH",
-        plannigLeader:"fellipo inzaghi",
+        plannigLeader:"filippo inzaghi",
         userLeader:"andrea pirlo",
         crew:"R01B",
         parada:"ANASI CAFE PRESTIGE"
@@ -126,7 +126,7 @@ export const DEMO_DATA=[
         name:"HAMADI",
         lastName:"FATIMA ZAHRA",
         category:"DH",
-        plannigLeader:"fellipo inzaghi",
+        plannigLeader:"filippo inzaghi",
         userLeader:"andrea pirlo",
         crew:"R03B",
         parada:"ANASI CAFE PRESTIGE"
@@ -136,7 +136,7 @@ export const DEMO_DATA=[
         name:"EL OUAFI",
         lastName:"AYOUB",
         category:"DH",
-        plannigLeader:"fellipo inzaghi",
+        plannigLeader:"filippo inzaghi",
         userLeader:"andrea pirlo",
         crew:"R01B",
         parada:"ANASI CAFE PRESTIGE"
@@ -146,7 +146,7 @@ export const DEMO_DATA=[
         name:"LAAMECH",
         lastName:"ZINEB",
         category:"DH",
-        plannigLeader:"fellipo inzaghi",
+        plannigLeader:"filippo inzaghi",
         userLeader:"andrea pirlo",
         crew:"R01B",
         parada:"OUISLANE DAR CHABAB BMCE"
@@ -156,7 +156,7 @@ export const DEMO_DATA=[
         name:"LACHKER",
         lastName:"MARYEM",
         category:"DH",
-        plannigLeader:"fellipo inzaghi",
+        plannigLeader:"filippo inzaghi",
         userLeader:"andrea pirlo",
         crew:"R05B",
         parada:"OUISLANE DAR CHABAB BMCE"
@@ -166,7 +166,7 @@ export const DEMO_DATA=[
         name:"LAAFAFRA",
         lastName:"KAWTAR",
         category:"DH",
-        plannigLeader:"fellipo inzaghi",
+        plannigLeader:"filippo inzaghi",
         userLeader:"andrea pirlo",
         crew:"R01B",
         parada:"BOUFAKRANE PHARMACIE BOUFAKRANE"
@@ -176,7 +176,7 @@ export const DEMO_DATA=[
         name:"ED-DAMGHI",
         lastName:"LAILA",
         category:"DH",
-        plannigLeader:"fellipo inzaghi",
+        plannigLeader:"filippo inzaghi",
         userLeader:"andrea pirlo",
         crew:"R01B",
         parada:"BOUFAKRANE PHARMACIE BOUFAKRANE"
@@ -186,7 +186,7 @@ export const DEMO_DATA=[
         name:"OUDADA",
         lastName:"AYOUB",
         category:"DH",
-        plannigLeader:"fellipo inzaghi",
+        plannigLeader:"filippo inzaghi",
         userLeader:"andrea pirlo",
         crew:"R01B",
         parada:"BOUFAKRANE PHARMACIE BOUFAKRANE"
@@ -196,7 +196,7 @@ export const DEMO_DATA=[
         name:"LEGHMARI",
         lastName:"AYOUB",
         category:"DH",
-        plannigLeader:"fellipo inzaghi",
+        plannigLeader:"filippo inzaghi",
         userLeader:"andrea pirlo",
         crew:"R01B",
         parada:"OUISLANE MAJD PHARMACIE ASRAR ASIHA"
@@ -206,7 +206,7 @@ export const DEMO_DATA=[
         name:"SRIFI",
         lastName:"MOUAD",
         category:"DH",
-        plannigLeader:"fellipo inzaghi",
+        plannigLeader:"filippo inzaghi",
         userLeader:"andrea pirlo",
         crew:"K01A",
         parada:"BOUFAKRANE CAFE WAD BOUFAKRANE"
@@ -216,7 +216,7 @@ export const DEMO_DATA=[
         name:"BOUKHDILI",
         lastName:"OMAR",
         category:"DH",
-        plannigLeader:"fellipo inzaghi",
+        plannigLeader:"filippo inzaghi",
         userLeader:"andrea pirlo",
         crew:"K01A",
         parada:"BOUFAKRANE CAFE WAD BOUFAKRANE"
@@ -226,7 +226,7 @@ export const DEMO_DATA=[
         name:"NOUISSIR",
         lastName:"BRAHIM",
         category:"DH",
-        plannigLeader:"fellipo inzaghi",
+        plannigLeader:"filippo inzaghi",
         userLeader:"andrea pirlo",
         crew:"K01A",
         parada:"OUISLANE HAY NASR CAFE ASAFI"
@@ -236,7 +236,7 @@ export const DEMO_DATA=[
         name:"STITOU",
         lastName:"ANAS",
         category:"DH",
-        plannigLeader:"fellipo inzaghi",
+        plannigLeader:"filippo inzaghi",
         userLeader:"andrea pirlo",
         crew:"K01A",
         parada:"OUISLANE HAY NASR CAFE ASAFI"
@@ -246,7 +246,7 @@ export const DEMO_DATA=[
         name:"BELKHAYAT",
         lastName:"ABDELWAHAB",
         category:"DH",
-        plannigLeader:"fellipo inzaghi",
+        plannigLeader:"filippo inzaghi",
         userLeader:"andrea pirlo",
         crew:"K01A",
         parada:"OUISLANE HAY NASR CAFE ASAFI"
@@ -256,7 +256,7 @@ export const DEMO_DATA=[
         name:"ZEMMAHI",
         lastName:"SIHAM",
         category:"DH",
-        plannigLeader:"fellipo inzaghi",
+        plannigLeader:"filippo inzaghi",
         userLeader:"andrea pirlo",
         crew:"K01A",
         parada:"MARJANE USINE YOURA"
@@ -266,7 +266,7 @@ export const DEMO_DATA=[
         name:"HALBAJ",
         lastName:"MOHAMED",
         category:"DH",
-        plannigLeader:"fellipo inzaghi",
+        plannigLeader:"filippo inzaghi",
         userLeader:"andrea pirlo",
         crew:"K01A",
         parada:"MARJANE USINE YOURA"
@@ -276,7 +276,7 @@ export const DEMO_DATA=[
         name:"WARDI",
         lastName:"FATIMA ZAHRA",
         category:"DH",
-        plannigLeader:"fellipo inzaghi",
+        plannigLeader:"filippo inzaghi",
         userLeader:"andrea pirlo",
         crew:"K01A",
         parada:"MARJANE USINE YOURA"
@@ -286,7 +286,7 @@ export const DEMO_DATA=[
         name:"OUDADA",
         lastName:"AMAL",
         category:"DH",
-        plannigLeader:"fellipo inzaghi",
+        plannigLeader:"filippo inzaghi",
         userLeader:"andrea pirlo",
         crew:"K01A",
         parada:"SEBATA NIYABA"
@@ -296,7 +296,7 @@ export const DEMO_DATA=[
         name:"NASRY",
         lastName:"KHAWLA",
         category:"DH",
-        plannigLeader:"fellipo inzaghi",
+        plannigLeader:"filippo inzaghi",
         userLeader:"andrea pirlo",
         crew:"K01A",
         parada:"SEBATA NIYABA"
@@ -306,7 +306,7 @@ export const DEMO_DATA=[
         name:"BATAS",
         lastName:"HASSAN",
         category:"DH",
-        plannigLeader:"fellipo inzaghi",
+        plannigLeader:"filippo inzaghi",
         userLeader:"andrea pirlo",
         crew:"K01A",
         parada:"AGDAL TAXI"
@@ -316,7 +316,7 @@ export const DEMO_DATA=[
         name:"STITOU",
         lastName:"ANAS",
         category:"DH",
-        plannigLeader:"fellipo inzaghi",
+        plannigLeader:"filippo inzaghi",
         userLeader:"andrea pirlo",
         crew:null,
         parada:"OUISLANE HAY NASR CAFE ASAFI"
@@ -326,7 +326,7 @@ export const DEMO_DATA=[
         name:"BELKHAYAT",
         lastName:"ABDELWAHAB",
         category:"DH",
-        plannigLeader:"fellipo inzaghi",
+        plannigLeader:"filippo inzaghi",
         userLeader:"andrea pirlo",
         crew:null,
         parada:"OUISLANE HAY NASR CAFE ASAFI"
@@ -336,7 +336,7 @@ export const DEMO_DATA=[
         name:"ZEMMAHI",
         lastName:"SIHAM",
         category:"DH",
-        plannigLeader:"fellipo inzaghi",
+        plannigLeader:"filippo inzaghi",
         userLeader:"andrea pirlo",
         crew:null,
         parada:"MARJANE USINE YOURA"
@@ -346,7 +346,7 @@ export const DEMO_DATA=[
         name:"HALBAJ",
         lastName:"MOHAMED",
         category:"DH",
-        plannigLeader:"fellipo inzaghi",
+        plannigLeader:"filippo inzaghi",
         userLeader:"andrea pirlo",
         crew:null,
         parada:"MARJANE USINE YOURA"
@@ -356,7 +356,7 @@ export const DEMO_DATA=[
         name:"WARDI",
         lastName:"FATIMA ZAHRA",
         category:"DH",
-        plannigLeader:"fellipo inzaghi",
+        plannigLeader:"filippo inzaghi",
         userLeader:"andrea pirlo",
         crew:"K01A",
         parada:"MARJANE USINE YOURA"
@@ -366,7 +366,7 @@ export const DEMO_DATA=[
         name:"OUDADA",
         lastName:"AMAL",
         category:"DH",
-        plannigLeader:"fellipo inzaghi",
+        plannigLeader:"filippo inzaghi",
         userLeader:"andrea pirlo",
         crew:null,
         parada:"SEBATA NIYABA"
@@ -376,7 +376,7 @@ export const DEMO_DATA=[
         name:"NASRY",
         lastName:"KHAWLA",
         category:"DH",
-        plannigLeader:"fellipo inzaghi",
+        plannigLeader:"filippo inzaghi",
         userLeader:"andrea pirlo",
         crew:null,
         parada:"SEBATA NIYABA"
@@ -386,7 +386,7 @@ export const DEMO_DATA=[
         name:"BATAS",
         lastName:"HASSAN",
         category:"DH",
-        plannigLeader:"fellipo inzaghi",
+        plannigLeader:"filippo inzaghi",
         userLeader:"andrea pirlo",
         crew:null,
         parada:"AGDAL TAXI"
