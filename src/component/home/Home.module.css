@@ -49,5 +49,10 @@
     gap: 1rem;
     justify-content: space-around;
     align-items: center;
-    min-height: 20rem;
+    min-height: 10rem;
 }
+table {
+    width: 95%;
+    border-collapse: initial;
+    border: 2px solid #f84018;
+  }

@@ -2,6 +2,9 @@ export const getCrewsfilter = (data) => {
   const returnedData = [];
 
   for (const i of data) {
+    if(i.crew===null){
+        continue;
+    }
     if (returnedData.length === 0) {
       returnedData.push({
         crewName: i.crew,
@@ -21,3 +24,14 @@ export const getCrewsfilter = (data) => {
   }
   return returnedData;
 };
+
+
+export const getIndivFilter=data=>{
+    const returnedData=[];
+    for(const i of data){
+        if(i.crew===null){
+            returnedData.push(i)
+        }
+    }
+    return returnedData;
+}

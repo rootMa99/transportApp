@@ -12,6 +12,7 @@ const Home = (p) => {
         <Crews data={data} title="crews" />
         <Crews data={data} title="individuals" />
       </div>
+      
     </div>
   );
 };
