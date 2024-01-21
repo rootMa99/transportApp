@@ -20,7 +20,7 @@
   width: 95%;
   min-height: 10rem;
   margin: 2rem auto;
-  background-color: #140400;
+  background-color: #4f1202;
 
 }
 .crewHolderPs{
@@ -28,13 +28,16 @@
   min-width: 20rem;
 }
 .crewHolderPsM{
-  background-color: #fee197;
+  background-color: #C7EDE6;
 }
 .crewHolderPsE{
-  background-color: #e6b15d ;
+  background-color: #FBCD59 ;
 }
 .crewHolderPsN{
-  background-color: #634c2280;
+  background-color: #010844;
+}
+.crewHolderAdmin{
+  background-color:#8b1f04;
 }
 .title,
 .titles{
@@ -45,6 +48,22 @@
   left: 2rem;
   padding-inline: 0.5rem;
 }
+.img, .imgs{
+  width: 5rem;
+  position: absolute;
+  z-index: 1;
+  top: -2rem;
+  left: -1.5rem;
+}
+
+.imgss{
+  width: 3rem;
+  top: -0.5rem;
+  position: absolute;
+  z-index: 1;
+  left: 3.5rem;
+}
+
 .notFound,
 .title,
 .titles {
@@ -59,7 +78,7 @@
   font-weight: bolder;
 }
 .titles{
- color: #ff0c0c;
+ left: 46.5%;
 }
 .crewHolder span,
 .crewHolderP span,
