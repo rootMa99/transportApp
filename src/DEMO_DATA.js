@@ -285,7 +285,7 @@ export const DEMO_DATA=[
         userLeader:"andrea pirlo",
         crew:"K01A",
         parada:"MARJANE USINE YOURA",
-        status:"available"
+        status:"infimity"
     },
     {
         matricule:2201,

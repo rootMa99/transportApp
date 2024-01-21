@@ -34,7 +34,7 @@ const NavBar = (p) => {
             </li>
             <li>
               <NavLink
-                to="/planning"
+                to="/assignTeamLeader"
                 className={({ isActive }) => (isActive ? c.activeLink : c.link)}
               >
                 Assign team leader

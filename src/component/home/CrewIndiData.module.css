@@ -51,7 +51,7 @@
   cursor: pointer;
 }
 .spec:hover {
-  background-color: #9b1e08;
+  background-color: #9b1e08 !important;
 }
 .table td {
   text-align: center;

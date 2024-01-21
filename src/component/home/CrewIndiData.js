@@ -52,7 +52,16 @@ const CrewIndiData = (p) => {
         <tbody>
           {p.data.status === "crews"
             ? data.map((m, i) => (
-                <tr key={i}>
+                <tr
+                  key={i}
+                  style={
+                    m.status === "infimity"
+                      ? { backgroundColor: "#393E41" }
+                      : m.status === "inem"
+                      ? { backgroundColor: "#3D305F" }
+                      : {}
+                  }
+                >
                   <td>{m.matricule}</td>
                   <td>{m.lastName}</td>
                   <td>{m.name}</td>
@@ -65,7 +74,16 @@ const CrewIndiData = (p) => {
                 </tr>
               ))
             : p.data.data.map((m, i) => (
-                <tr key={i}>
+                <tr
+                  key={i}
+                  style={
+                    m.status === "infimity"
+                      ? { backgroundColor: "#393E41" }
+                      : m.status === "inem"
+                      ? { backgroundColor: "#3D305F" }
+                      : {}
+                  }
+                >
                   <td>{m.matricule}</td>
                   <td>{m.lastName}</td>
                   <td>{m.name}</td>
@@ -74,16 +92,7 @@ const CrewIndiData = (p) => {
                   <td>{m.plannigLeader}</td>
                   <td className={c.spec}>{m.userLeader}</td>
                   <td className={c.spec}>{m.parada}</td>
-                  <td
-                    className={c.spec}
-                    style={
-                      m.status === "infimity"
-                        ? { backgroundColor: "#116D6E" }
-                        : { backgroundColor: "#CD1818" }
-                    }
-                  >
-                    {m.status}
-                  </td>
+                  <td>{m.status}</td>
                 </tr>
               ))}
         </tbody>

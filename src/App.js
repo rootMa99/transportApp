@@ -5,6 +5,7 @@ import Login from "./component/login/Login";
 import { Suspense } from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
 import Home from "./component/home/Home";
+import Planning from "./component/planning/Planning";
 
 function App() {
   const { isLoged, data } = useSelector((s) => s.datas);
@@ -21,6 +22,7 @@ function App() {
           <Routes>
             <Route index path="/" element={<Navigate replace to="/home" />} />
             <Route exact path="/home" element={<Home />} />
+            <Route exact path="/planning" element={<Planning />} />
           </Routes>
         </Suspense>
       )}
