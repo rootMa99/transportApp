@@ -9,7 +9,8 @@ export const DEMO_DATA=[
         plannigLeader:"filippo inzaghi",
         userLeader:"andrea pirlo",
         crew:"R01C",
-        parada:"BNI MHAMED PHARMACIE AL HORIA"
+        parada:"BNI MHAMED PHARMACIE AL HORIA",
+        status:"available"
     },
     {
         matricule:5586,
@@ -19,7 +20,8 @@ export const DEMO_DATA=[
         plannigLeader:"filippo inzaghi",
         userLeader:"andrea pirlo",
         crew:"R01B",
-        parada:"BNI MHAMED PHARMACIE AL HORIA"
+        parada:"BNI MHAMED PHARMACIE AL HORIA",
+        status:"available"
     },
     {
         matricule:7200,
@@ -29,7 +31,8 @@ export const DEMO_DATA=[
         plannigLeader:"filippo inzaghi",
         userLeader:"andrea pirlo",
         crew:"R01B",
-        parada:"BNI MHAMED PHARMACIE AL HORIA"
+        parada:"BNI MHAMED PHARMACIE AL HORIA",
+        status:"available"
     },
     {
         matricule:7575,
@@ -39,7 +42,8 @@ export const DEMO_DATA=[
         plannigLeader:"filippo inzaghi",
         userLeader:"andrea pirlo",
         crew:"R01B",
-        parada:"OUISLANE PHARMACIE AL HIKMA"
+        parada:"OUISLANE PHARMACIE AL HIKMA",
+        status:"available"
     },
     {
         matricule:6738,
@@ -49,7 +53,8 @@ export const DEMO_DATA=[
         plannigLeader:"filippo inzaghi",
         userLeader:"andrea pirlo",
         crew:"R01B",
-        parada:"OUISLANE PHARMACIE AL HIKMA"
+        parada:"OUISLANE PHARMACIE AL HIKMA",
+        status:"inem"
     },
     {
         matricule:7866,
@@ -59,7 +64,8 @@ export const DEMO_DATA=[
         plannigLeader:"filippo inzaghi",
         userLeader:"andrea pirlo",
         crew:"R01C",
-        parada:"DOWAR JBALA BARID BANK"
+        parada:"DOWAR JBALA BARID BANK",
+        status:"available"
     },
     {
         matricule:5789,
@@ -69,7 +75,8 @@ export const DEMO_DATA=[
         plannigLeader:"filippo inzaghi",
         userLeader:"andrea pirlo",
         crew:"R01C",
-        parada:"DOWAR JBALA BARID BANK"
+        parada:"DOWAR JBALA BARID BANK",
+        status:"available"
     },
     {
         matricule:7868,
@@ -79,7 +86,8 @@ export const DEMO_DATA=[
         plannigLeader:"filippo inzaghi",
         userLeader:"andrea pirlo",
         crew:"R01C",
-        parada:"NAIM CAFE SARAHA"
+        parada:"NAIM CAFE SARAHA",
+        status:"available"
     },
     {
         matricule:4927,
@@ -89,7 +97,8 @@ export const DEMO_DATA=[
         plannigLeader:"filippo inzaghi",
         userLeader:"andrea pirlo",
         crew:"R01B",
-        parada:"NAIM CAFE SARAHA"
+        parada:"NAIM CAFE SARAHA",
+        status:"available"
     },
     {
         matricule:3792,
@@ -99,7 +108,8 @@ export const DEMO_DATA=[
         plannigLeader:"filippo inzaghi",
         userLeader:"andrea pirlo",
         crew:"R03B",
-        parada:"NAIM CAFE SARAHA"
+        parada:"NAIM CAFE SARAHA",
+        status:"available"
     },
     {
         matricule:627,
@@ -109,7 +119,8 @@ export const DEMO_DATA=[
         plannigLeader:"filippo inzaghi",
         userLeader:"andrea pirlo",
         crew:"R07B",
-        parada:"NAIM CAFE SARAHA"
+        parada:"NAIM CAFE SARAHA",
+        status:"infimity"
     },
     {
         matricule:203,
@@ -119,7 +130,8 @@ export const DEMO_DATA=[
         plannigLeader:"filippo inzaghi",
         userLeader:"andrea pirlo",
         crew:"R01B",
-        parada:"ANASI CAFE PRESTIGE"
+        parada:"ANASI CAFE PRESTIGE",
+        status:"available"
     },
     {
         matricule:6020,
@@ -129,7 +141,8 @@ export const DEMO_DATA=[
         plannigLeader:"filippo inzaghi",
         userLeader:"andrea pirlo",
         crew:"R03B",
-        parada:"ANASI CAFE PRESTIGE"
+        parada:"ANASI CAFE PRESTIGE",
+        status:"available"
     },
     {
         matricule:3902,
@@ -139,7 +152,8 @@ export const DEMO_DATA=[
         plannigLeader:"filippo inzaghi",
         userLeader:"andrea pirlo",
         crew:"R01B",
-        parada:"ANASI CAFE PRESTIGE"
+        parada:"ANASI CAFE PRESTIGE",
+        status:"available"
     },
     {
         matricule:3302,
@@ -149,7 +163,8 @@ export const DEMO_DATA=[
         plannigLeader:"filippo inzaghi",
         userLeader:"andrea pirlo",
         crew:"R01B",
-        parada:"OUISLANE DAR CHABAB BMCE"
+        parada:"OUISLANE DAR CHABAB BMCE",
+        status:"available"
     },
     {
         matricule:8029,
@@ -159,7 +174,8 @@ export const DEMO_DATA=[
         plannigLeader:"filippo inzaghi",
         userLeader:"andrea pirlo",
         crew:"R05B",
-        parada:"OUISLANE DAR CHABAB BMCE"
+        parada:"OUISLANE DAR CHABAB BMCE",
+        status:"available"
     },
     {
         matricule:9037,
@@ -169,7 +185,8 @@ export const DEMO_DATA=[
         plannigLeader:"filippo inzaghi",
         userLeader:"andrea pirlo",
         crew:"R01B",
-        parada:"BOUFAKRANE PHARMACIE BOUFAKRANE"
+        parada:"BOUFAKRANE PHARMACIE BOUFAKRANE",
+        status:"available"
     },
     {
         matricule:8092,
@@ -179,7 +196,8 @@ export const DEMO_DATA=[
         plannigLeader:"filippo inzaghi",
         userLeader:"andrea pirlo",
         crew:"R01B",
-        parada:"BOUFAKRANE PHARMACIE BOUFAKRANE"
+        parada:"BOUFAKRANE PHARMACIE BOUFAKRANE",
+        status:"available"
     },
     {
         matricule:221,
@@ -189,7 +207,8 @@ export const DEMO_DATA=[
         plannigLeader:"filippo inzaghi",
         userLeader:"andrea pirlo",
         crew:"R01B",
-        parada:"BOUFAKRANE PHARMACIE BOUFAKRANE"
+        parada:"BOUFAKRANE PHARMACIE BOUFAKRANE",
+        status:"available"
     },
     {
         matricule:7218,
@@ -199,7 +218,8 @@ export const DEMO_DATA=[
         plannigLeader:"filippo inzaghi",
         userLeader:"andrea pirlo",
         crew:"R01B",
-        parada:"OUISLANE MAJD PHARMACIE ASRAR ASIHA"
+        parada:"OUISLANE MAJD PHARMACIE ASRAR ASIHA",
+        status:"available"
     },
     {
         matricule:880,
@@ -209,7 +229,8 @@ export const DEMO_DATA=[
         plannigLeader:"filippo inzaghi",
         userLeader:"andrea pirlo",
         crew:"K01A",
-        parada:"BOUFAKRANE CAFE WAD BOUFAKRANE"
+        parada:"BOUFAKRANE CAFE WAD BOUFAKRANE",
+        status:"available"
     },
     {
         matricule:211,
@@ -219,7 +240,8 @@ export const DEMO_DATA=[
         plannigLeader:"filippo inzaghi",
         userLeader:"andrea pirlo",
         crew:"K01A",
-        parada:"BOUFAKRANE CAFE WAD BOUFAKRANE"
+        parada:"BOUFAKRANE CAFE WAD BOUFAKRANE",
+        status:"inem"
     },
     {
         matricule:7778,
@@ -229,7 +251,8 @@ export const DEMO_DATA=[
         plannigLeader:"filippo inzaghi",
         userLeader:"andrea pirlo",
         crew:"K01A",
-        parada:"OUISLANE HAY NASR CAFE ASAFI"
+        parada:"OUISLANE HAY NASR CAFE ASAFI",
+        status:"available"
     },
     {
         matricule:5563,
@@ -239,7 +262,8 @@ export const DEMO_DATA=[
         plannigLeader:"filippo inzaghi",
         userLeader:"andrea pirlo",
         crew:"K01A",
-        parada:"OUISLANE HAY NASR CAFE ASAFI"
+        parada:"OUISLANE HAY NASR CAFE ASAFI",
+        status:"available"
     },
     {
         matricule:61,
@@ -249,7 +273,8 @@ export const DEMO_DATA=[
         plannigLeader:"filippo inzaghi",
         userLeader:"andrea pirlo",
         crew:"K01A",
-        parada:"OUISLANE HAY NASR CAFE ASAFI"
+        parada:"OUISLANE HAY NASR CAFE ASAFI",
+        status:"available"
     },
     {
         matricule:3721,
@@ -259,7 +284,8 @@ export const DEMO_DATA=[
         plannigLeader:"filippo inzaghi",
         userLeader:"andrea pirlo",
         crew:"K01A",
-        parada:"MARJANE USINE YOURA"
+        parada:"MARJANE USINE YOURA",
+        status:"available"
     },
     {
         matricule:2201,
@@ -269,7 +295,8 @@ export const DEMO_DATA=[
         plannigLeader:"filippo inzaghi",
         userLeader:"andrea pirlo",
         crew:"K01A",
-        parada:"MARJANE USINE YOURA"
+        parada:"MARJANE USINE YOURA",
+        status:"available"
     },
     {
         matricule:2001,
@@ -279,7 +306,8 @@ export const DEMO_DATA=[
         plannigLeader:"filippo inzaghi",
         userLeader:"andrea pirlo",
         crew:"K01A",
-        parada:"MARJANE USINE YOURA"
+        parada:"MARJANE USINE YOURA",
+        status:"available"
     },
     {
         matricule:6001,
@@ -289,7 +317,8 @@ export const DEMO_DATA=[
         plannigLeader:"filippo inzaghi",
         userLeader:"andrea pirlo",
         crew:"K01A",
-        parada:"SEBATA NIYABA"
+        parada:"SEBATA NIYABA",
+        status:"available"
     },
     {
         matricule:3009,
@@ -299,7 +328,8 @@ export const DEMO_DATA=[
         plannigLeader:"filippo inzaghi",
         userLeader:"andrea pirlo",
         crew:"K01A",
-        parada:"SEBATA NIYABA"
+        parada:"SEBATA NIYABA",
+        status:"available"
     },
     {
         matricule:4093,
@@ -309,7 +339,8 @@ export const DEMO_DATA=[
         plannigLeader:"filippo inzaghi",
         userLeader:"andrea pirlo",
         crew:"K01A",
-        parada:"AGDAL TAXI"
+        parada:"AGDAL TAXI",
+        status:"available"
     },
     {
         matricule:5563,
@@ -319,7 +350,8 @@ export const DEMO_DATA=[
         plannigLeader:"filippo inzaghi",
         userLeader:"andrea pirlo",
         crew:null,
-        parada:"OUISLANE HAY NASR CAFE ASAFI"
+        parada:"OUISLANE HAY NASR CAFE ASAFI",
+        status:"available"
     },
     {
         matricule:61,
@@ -329,7 +361,8 @@ export const DEMO_DATA=[
         plannigLeader:"filippo inzaghi",
         userLeader:"andrea pirlo",
         crew:null,
-        parada:"OUISLANE HAY NASR CAFE ASAFI"
+        parada:"OUISLANE HAY NASR CAFE ASAFI",
+        status:"available"
     },
     {
         matricule:3721,
@@ -339,7 +372,8 @@ export const DEMO_DATA=[
         plannigLeader:"filippo inzaghi",
         userLeader:"andrea pirlo",
         crew:null,
-        parada:"MARJANE USINE YOURA"
+        parada:"MARJANE USINE YOURA",
+        status:"available"
     },
     {
         matricule:2201,
@@ -349,7 +383,8 @@ export const DEMO_DATA=[
         plannigLeader:"filippo inzaghi",
         userLeader:"andrea pirlo",
         crew:null,
-        parada:"MARJANE USINE YOURA"
+        parada:"MARJANE USINE YOURA",
+        status:"available"
     },
     {
         matricule:2001,
@@ -359,7 +394,8 @@ export const DEMO_DATA=[
         plannigLeader:"filippo inzaghi",
         userLeader:"andrea pirlo",
         crew:"K01A",
-        parada:"MARJANE USINE YOURA"
+        parada:"MARJANE USINE YOURA",
+        status:"available"
     },
     {
         matricule:6001,
@@ -369,7 +405,8 @@ export const DEMO_DATA=[
         plannigLeader:"filippo inzaghi",
         userLeader:"andrea pirlo",
         crew:null,
-        parada:"SEBATA NIYABA"
+        parada:"SEBATA NIYABA",
+        status:"available"
     },
     {
         matricule:3009,
@@ -379,7 +416,8 @@ export const DEMO_DATA=[
         plannigLeader:"filippo inzaghi",
         userLeader:"andrea pirlo",
         crew:null,
-        parada:"SEBATA NIYABA"
+        parada:"SEBATA NIYABA",
+        status:"available"
     },
     {
         matricule:4093,
@@ -389,7 +427,8 @@ export const DEMO_DATA=[
         plannigLeader:"filippo inzaghi",
         userLeader:"andrea pirlo",
         crew:null,
-        parada:"AGDAL TAXI"
+        parada:"AGDAL TAXI",
+        status:"available"
     },
 
 ]
