@@ -52,7 +52,7 @@ const Planning = (p) => {
             (m) =>
               m.status === "inem" &&
               alert(
-                `This employee with matricule ${m.matricule} fullName ${m.name} ${m.lastName} cannot work the night shift.`
+                `${m.name} ${m.lastName}, matricule ${m.matricule} cannot work the night shift.`
               )
           );
         }
@@ -109,7 +109,22 @@ const Planning = (p) => {
       };
       const selected = selecte();
       console.log("ruun", selected);
-      targetId === "night" && setNight((prev) => [...prev, ...selected]);
+      if (targetId === "night") {
+        if (type === "indiv") {
+          if (selected[0].status === "inem") {
+            alert("This employee cannot work the night shift.");
+          }
+        } else {
+          selected[0].employee.map(
+            (m) =>
+              m.status === "inem" &&
+              alert(
+                `${m.name} ${m.lastName}, matricule ${m.matricule} cannot work the night shift.`
+              )
+          );
+        }
+        setNight((prev) => [...prev, ...selected]);
+      }
       targetId === "morning" && setMor((prev) => [...prev, ...selected]);
       targetId === "evening" && setEvening((prev) => [...prev, ...selected]);
     }
