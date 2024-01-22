@@ -1,6 +1,7 @@
 import { useSelector } from "react-redux";
 import c from "../home/Home.module.css";
 import cs from "../home/Crews.module.css";
+import BackDrop from "../ui/BackDrop";
 import morning from "../../assets/morning.png";
 import eveningpic from "../../assets/evening.png";
 import nightPic from "../../assets/night.png";
@@ -9,6 +10,7 @@ import enpm from "../../assets/16h.png";
 import enpmt from "../../assets/17h.png";
 import { getCrewsfilter, getIndivFilter } from "../hooks/getCrews";
 import { useState } from "react";
+import Notification from "./Notification";
 
 const Planning = (p) => {
   const { data } = useSelector((s) => s.datas);
@@ -19,11 +21,17 @@ const Planning = (p) => {
   const [evening, setEvening] = useState([]);
   const [type, setType] = useState();
   const [zone, setZone] = useState();
+  const [notify, setNotify] = useState({ rend: false, data: {} });
   console.log(crews, individuals, night, type, zone);
   const handleDragStart = (e, id, type, zone) => {
     e.dataTransfer.setData("text/plain", id);
     setType(type);
     setZone(zone);
+  };
+  const clicknotify = (e, type, data) => {
+    setNotify({ rend: false, data: {} })
+    type === "morning" && setMor((prev) => [...prev, data]);
+      type === "evening" && setEvening((prev) => [...prev, data]);
   };
 
   const handleDragOver = (e) => {
@@ -34,27 +42,34 @@ const Planning = (p) => {
     e.preventDefault();
     const draggedItem = e.dataTransfer.getData("text/plain");
 
-    // Perform the action you want with the dragged item and target
-    console.log(`Item with ID ${draggedItem} dropped onto ${targetId}`);
     if (zone === undefined) {
-      const selected =
+      let selected =
         type === "indiv"
           ? individuals.filter((f) => f.matricule === +draggedItem)
           : crews.filter((f) => f.crewName === draggedItem);
-      console.log("ruun", selected);
+      console.log("ruun", selected, type);
       if (targetId === "night") {
         if (type === "indiv") {
           if (selected[0].status === "inem") {
-            alert("This employee cannot work the night shift.");
+            setNotify({
+              rend: true,
+              data: selected[0],
+            });
           }
         } else {
-          selected[0].employee.map(
-            (m) =>
-              m.status === "inem" &&
-              alert(
-                `${m.name} ${m.lastName}, matricule ${m.matricule} cannot work the night shift.`
-              )
-          );
+          selected[0].employee.map((m) => {
+            if (m.status === "inem") {
+              const selectedf = selected[0].employee.filter(
+                (f) => f.matricule !== m.matricule
+              );
+              selected[0].employee=selectedf
+              setNotify({
+                rend: true,
+                data: m,
+              });
+            }
+            return null;
+          });
         }
         setNight((prev) => [...prev, ...selected]);
       }
@@ -107,21 +122,31 @@ const Planning = (p) => {
             : night.filter((f) => f.crewName === draggedItem);
         }
       };
-      const selected = selecte();
+      let selected = selecte();
       console.log("ruun", selected);
       if (targetId === "night") {
         if (type === "indiv") {
           if (selected[0].status === "inem") {
-            alert("This employee cannot work the night shift.");
+            setNotify({
+              rend: true,
+              data: selected[0],
+            });
           }
         } else {
-          selected[0].employee.map(
-            (m) =>
-              m.status === "inem" &&
-              alert(
-                `${m.name} ${m.lastName}, matricule ${m.matricule} cannot work the night shift.`
-              )
-          );
+          selected[0].employee.map((m) => {
+            if (m.status === "inem") {
+              const selectedf = selected[0].employee.filter(
+                (f) => f.matricule !== m.matricule
+              );
+              selected[0].employee=selectedf
+              setNotify({
+                rend: true,
+                data: m,
+              });
+            }
+            return null
+          });
+          console.log(notify.data);
         }
         setNight((prev) => [...prev, ...selected]);
       }
@@ -132,6 +157,8 @@ const Planning = (p) => {
 
   return (
     <div className={c.wrapper}>
+      {notify.rend && <BackDrop />}
+      {notify.rend && <Notification data={notify.data} click={clicknotify}/>}
       <div className={c.center}>
         <div className={c.content}>
           <div className={cs.crewHolderP}>

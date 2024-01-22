@@ -6,6 +6,7 @@ import { Suspense } from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
 import Home from "./component/home/Home";
 import Planning from "./component/planning/Planning";
+import Notification from "./component/planning/Notification";
 
 function App() {
   const { isLoged, data } = useSelector((s) => s.datas);
@@ -23,6 +24,25 @@ function App() {
             <Route index path="/" element={<Navigate replace to="/home" />} />
             <Route exact path="/home" element={<Home />} />
             <Route exact path="/planning" element={<Planning />} />
+            <Route
+              exact
+              path="/assignTeamLeader"
+              element={
+                <Notification
+                  data={{
+                    matricule: 7218,
+                    name: "LEGHMARI",
+                    lastName: "AYOUB",
+                    category: "DH",
+                    plannigLeader: "filippo inzaghi",
+                    userLeader: "andrea pirlo",
+                    crew: "R01B",
+                    parada: "OUISLANE MAJD PHARMACIE ASRAR ASIHA",
+                    status: "available",
+                  }}
+                />
+              }
+            />
           </Routes>
         </Suspense>
       )}

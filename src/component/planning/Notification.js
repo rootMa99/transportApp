@@ -1,19 +1,33 @@
 import c from "./Notification.module.css";
 
 const Notification = (p) => {
+
+    const morning=(e)=>{
+        p.click(e, "morning", p.data);
+    }
+    const evening=(e)=>{
+        p.click(e, "evening", p.data);
+        
+    }
+    const ctp=(e)=>{
+        p.click(e, "ctp", p.data);
+
+    }
+
+
   return (
-    <div className={c.notify}>
+    <div className={`${c.notify} ${c.anim}`}>
       <p>
         <span>
           {p.data.name} {p.data.lastName}
         </span>
-        , matricule<span>{p.data.matricule}</span> cannot work the night shift.
+        , matricule <span>{p.data.matricule}</span> cannot work the night shift.
       </p>
       <p>Which shift might work best for him?</p>
       <div className={c.btnHolder}>
-        <button>morning</button>
-        <button>evening</button>
-        <button>ctp</button>
+        <button onClick={morning}><span>morning</span></button>
+        <button onClick={evening}><span>evening</span></button>
+        <button onClick={ctp}><span>ctp</span></button>
       </div>
     </div>
   );
