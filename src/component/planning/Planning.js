@@ -8,14 +8,15 @@ import nightPic from "../../assets/night.png";
 import enAm from "../../assets/8am.png";
 import enpm from "../../assets/16h.png";
 import enpmt from "../../assets/17h.png";
+import hos from "../../assets/hos.png";
 import { getCrewsfilter, getIndivFilter } from "../hooks/getCrews";
 import { useState } from "react";
 import Notification from "./Notification";
 
 const Planning = (p) => {
   const { data } = useSelector((s) => s.datas);
-  const [crews, setCrews] = useState(getCrewsfilter(data));
-  const [individuals, setIndividuals] = useState(getIndivFilter(data));
+  const [crews, setCrews] = useState(getCrewsfilter(data.filter(f=>f.status !== "infirmity")));
+  const [individuals, setIndividuals] = useState(getIndivFilter(data.filter(f=>f.status !== "infirmity")));
   const [night, setNight] = useState([]);
   const [mor, setMor] = useState([]);
   const [evening, setEvening] = useState([]);
@@ -23,6 +24,9 @@ const Planning = (p) => {
   const [zone, setZone] = useState();
   const [notify, setNotify] = useState({ rend: false, data: {} });
   console.log(crews, individuals, night, type, zone);
+  console.log("zone", mor, evening, night)
+
+  const sicknessData=data.filter(f=>f.status === "infirmity")
   const handleDragStart = (e, id, type, zone) => {
     e.dataTransfer.setData("text/plain", id);
     setType(type);
@@ -55,6 +59,8 @@ const Planning = (p) => {
               rend: true,
               data: selected[0],
             });
+          }else{
+            setNight((prev)=>[...prev, ...selected])
           }
         } else {
           selected[0].employee.map((m) => {
@@ -70,8 +76,8 @@ const Planning = (p) => {
             }
             return null;
           });
+          setNight((prev) => [...prev, ...selected]);
         }
-        setNight((prev) => [...prev, ...selected]);
       }
       targetId === "morning" && setMor((prev) => [...prev, ...selected]);
       targetId === "evening" && setEvening((prev) => [...prev, ...selected]);
@@ -147,8 +153,8 @@ const Planning = (p) => {
             return null
           });
           console.log(notify.data);
+          setNight((prev) => [...prev, ...selected]);
         }
-        setNight((prev) => [...prev, ...selected]);
       }
       targetId === "morning" && setMor((prev) => [...prev, ...selected]);
       targetId === "evening" && setEvening((prev) => [...prev, ...selected]);
@@ -160,6 +166,28 @@ const Planning = (p) => {
       {notify.rend && <BackDrop />}
       {notify.rend && <Notification data={notify.data} click={clicknotify}/>}
       <div className={c.center}>
+      
+          <div
+            className={`${cs.crewHolderPs} ${cs.crewHolderInfi} ${cs.crewHolderP}`}
+            // onDragOver={handleDragOver}
+            // onDrop={(e) => handleDrop(e, "night")}
+          >
+            <img src={hos} alt="mor" className={cs.imgsh} />
+            {sicknessData.length > 0 ? (
+              sicknessData.map((m, i) => (
+                <span
+                  key={i}
+                  style={{cursor:"pointer"}}
+                >
+                  {m.matricule}
+                </span>
+              ))
+            ) : (
+              <h1 className={cs.notFound}>NO Item</h1>
+            )}
+            
+          </div>
+       
         <div className={c.content}>
           <div className={cs.crewHolderP}>
             <h1 className={cs.title}>crews</h1>

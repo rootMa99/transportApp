@@ -39,6 +39,13 @@
 .crewHolderAdmin{
   background-color:#8b1f04;
 }
+.crewHolderInfi{
+  width: 80%;
+  background-color:#121516;
+  margin: auto;
+  margin-top: 2rem;
+
+}
 .title,
 .titles{
   background-color: transparent;
@@ -55,7 +62,14 @@
   top: -2rem;
   left: -1.5rem;
 }
+.imgsh{
+  width: 7rem;
+  position: absolute;
+  z-index: 1;
+  top: -2.5rem;
+  left: -2.2rem;
 
+}
 .imgss{
   width: 3rem;
   top: -0.5rem;
@@ -108,4 +122,11 @@
 }
 .crewHolderP span:active {
   cursor:grabbing;
+}
+.crewHolderInfi span{
+  background-color: #393e41;
+  border: 1px solid #000000;
+}
+.crewHolderInfi span:hover{
+  background-color: #393e41;
 }

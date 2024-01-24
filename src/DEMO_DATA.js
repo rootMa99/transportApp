@@ -120,7 +120,7 @@ export const DEMO_DATA=[
         userLeader:"andrea pirlo",
         crew:"R07B",
         parada:"NAIM CAFE SARAHA",
-        status:"infimity"
+        status:"infirmity"
     },
     {
         matricule:203,
@@ -263,7 +263,7 @@ export const DEMO_DATA=[
         userLeader:"andrea pirlo",
         crew:"K01A",
         parada:"OUISLANE HAY NASR CAFE ASAFI",
-        status:"available"
+        status:"infirmity"
     },
     {
         matricule:61,
@@ -285,7 +285,7 @@ export const DEMO_DATA=[
         userLeader:"andrea pirlo",
         crew:"K01A",
         parada:"MARJANE USINE YOURA",
-        status:"infimity"
+        status:"infirmity"
     },
     {
         matricule:2201,
@@ -362,7 +362,7 @@ export const DEMO_DATA=[
         userLeader:"andrea pirlo",
         crew:null,
         parada:"OUISLANE HAY NASR CAFE ASAFI",
-        status:"available"
+        status:"inem"
     },
     {
         matricule:3721,

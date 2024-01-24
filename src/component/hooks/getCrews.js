@@ -35,3 +35,7 @@ export const getIndivFilter=data=>{
     }
     return returnedData;
 }
+
+// export const notsick=data=>{
+//   return data.filter(f=>f.status !== "inem");
+// }

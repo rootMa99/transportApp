@@ -6,6 +6,7 @@ const DataSlice = createSlice(
         initialState:{
             isLoged:false,
             data:[],
+            infirmityData:[],
         },
         reducers:{
             setLogin(s,p){
@@ -18,6 +19,11 @@ const DataSlice = createSlice(
             setData(s,p){
                 if(s.data.length===0){
                     s.data.push(...p.payload);
+                }
+            },
+            setInfirmityData(s,p){
+                if(s.infirmityData.length===0){
+                    s.infirmityData.push(...p.payload)
                 }
             }
         }

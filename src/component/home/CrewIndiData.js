@@ -55,7 +55,7 @@ const CrewIndiData = (p) => {
                 <tr
                   key={i}
                   style={
-                    m.status === "infimity"
+                    m.status === "infirmity"
                       ? { backgroundColor: "#393E41" }
                       : m.status === "inem"
                       ? { backgroundColor: "#3D305F" }
@@ -77,7 +77,7 @@ const CrewIndiData = (p) => {
                 <tr
                   key={i}
                   style={
-                    m.status === "infimity"
+                    m.status === "infirmity"
                       ? { backgroundColor: "#393E41" }
                       : m.status === "inem"
                       ? { backgroundColor: "#3D305F" }
