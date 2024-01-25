@@ -21,7 +21,7 @@ export const DEMO_DATA=[
         userLeader:"andrea pirlo",
         crew:"R01B",
         parada:"BNI MHAMED PHARMACIE AL HORIA",
-        status:"available"
+        status:"infirmity"
     },
     {
         matricule:7200,
@@ -54,7 +54,7 @@ export const DEMO_DATA=[
         userLeader:"andrea pirlo",
         crew:"R01B",
         parada:"OUISLANE PHARMACIE AL HIKMA",
-        status:"inem"
+        status:"inapt"
     },
     {
         matricule:7866,
@@ -131,7 +131,7 @@ export const DEMO_DATA=[
         userLeader:"andrea pirlo",
         crew:"R01B",
         parada:"ANASI CAFE PRESTIGE",
-        status:"available"
+        status:"ctp"
     },
     {
         matricule:6020,
@@ -219,7 +219,7 @@ export const DEMO_DATA=[
         userLeader:"andrea pirlo",
         crew:"R01B",
         parada:"OUISLANE MAJD PHARMACIE ASRAR ASIHA",
-        status:"available"
+        status:"infirmity"
     },
     {
         matricule:880,
@@ -241,7 +241,7 @@ export const DEMO_DATA=[
         userLeader:"andrea pirlo",
         crew:"K01A",
         parada:"BOUFAKRANE CAFE WAD BOUFAKRANE",
-        status:"inem"
+        status:"inapt"
     },
     {
         matricule:7778,
@@ -252,7 +252,7 @@ export const DEMO_DATA=[
         userLeader:"andrea pirlo",
         crew:"K01A",
         parada:"OUISLANE HAY NASR CAFE ASAFI",
-        status:"available"
+        status:"ctp"
     },
     {
         matricule:5563,
@@ -362,7 +362,7 @@ export const DEMO_DATA=[
         userLeader:"andrea pirlo",
         crew:null,
         parada:"OUISLANE HAY NASR CAFE ASAFI",
-        status:"inem"
+        status:"inapt"
     },
     {
         matricule:3721,
@@ -395,7 +395,7 @@ export const DEMO_DATA=[
         userLeader:"andrea pirlo",
         crew:"K01A",
         parada:"MARJANE USINE YOURA",
-        status:"available"
+        status:"ctp"
     },
     {
         matricule:6001,
@@ -417,7 +417,7 @@ export const DEMO_DATA=[
         userLeader:"andrea pirlo",
         crew:null,
         parada:"SEBATA NIYABA",
-        status:"available"
+        status:"ctp"
     },
     {
         matricule:4093,
@@ -428,7 +428,7 @@ export const DEMO_DATA=[
         userLeader:"andrea pirlo",
         crew:null,
         parada:"AGDAL TAXI",
-        status:"available"
+        status:"ctp"
     },
 
 ]

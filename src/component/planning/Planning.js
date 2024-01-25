@@ -15,27 +15,39 @@ import Notification from "./Notification";
 
 const Planning = (p) => {
   const { data } = useSelector((s) => s.datas);
-  const [crews, setCrews] = useState(getCrewsfilter(data.filter(f=>f.status !== "infirmity")));
-  const [individuals, setIndividuals] = useState(getIndivFilter(data.filter(f=>f.status !== "infirmity")));
+  const [crews, setCrews] = useState(
+    getCrewsfilter(
+      data.filter((f) => f.status !== "infirmity" && f.status !== "ctp")
+    )
+  );
+  const [individuals, setIndividuals] = useState(
+    getIndivFilter(
+      data.filter((f) => f.status !== "infirmity" && f.status !== "ctp")
+    )
+  );
   const [night, setNight] = useState([]);
   const [mor, setMor] = useState([]);
   const [evening, setEvening] = useState([]);
   const [type, setType] = useState();
   const [zone, setZone] = useState();
+  const [admin, setAdmin] = useState({
+    adminOne: [],
+    adminTwo: [],
+  });
   const [notify, setNotify] = useState({ rend: false, data: {} });
   console.log(crews, individuals, night, type, zone);
-  console.log("zone", mor, evening, night)
+  console.log("zone", mor, evening, night, admin.adminOne, admin.adminTwo);
 
-  const sicknessData=data.filter(f=>f.status === "infirmity")
+  const sicknessData = data.filter((f) => f.status === "infirmity");
   const handleDragStart = (e, id, type, zone) => {
     e.dataTransfer.setData("text/plain", id);
     setType(type);
     setZone(zone);
   };
   const clicknotify = (e, type, data) => {
-    setNotify({ rend: false, data: {} })
+    setNotify({ rend: false, data: {} });
     type === "morning" && setMor((prev) => [...prev, data]);
-      type === "evening" && setEvening((prev) => [...prev, data]);
+    type === "evening" && setEvening((prev) => [...prev, data]);
   };
 
   const handleDragOver = (e) => {
@@ -51,24 +63,24 @@ const Planning = (p) => {
         type === "indiv"
           ? individuals.filter((f) => f.matricule === +draggedItem)
           : crews.filter((f) => f.crewName === draggedItem);
-      console.log("ruun", selected, type);
+      console.log("ruun", selected, type, draggedItem, targetId);
       if (targetId === "night") {
         if (type === "indiv") {
-          if (selected[0].status === "inem") {
+          if (selected[0].status === "inapt") {
             setNotify({
               rend: true,
               data: selected[0],
             });
-          }else{
-            setNight((prev)=>[...prev, ...selected])
+          } else {
+            setNight((prev) => [...prev, ...selected]);
           }
         } else {
           selected[0].employee.map((m) => {
-            if (m.status === "inem") {
+            if (m.status === "inapt") {
               const selectedf = selected[0].employee.filter(
                 (f) => f.matricule !== m.matricule
               );
-              selected[0].employee=selectedf
+              selected[0].employee = selectedf;
               setNotify({
                 rend: true,
                 data: m,
@@ -78,6 +90,26 @@ const Planning = (p) => {
           });
           setNight((prev) => [...prev, ...selected]);
         }
+      }
+      if (targetId === "adminOne") {
+        if (type === "crew") {
+          alert("Crew not allowed here. Please choose some shift for them");
+          return;
+        }
+        setAdmin((prev) => ({
+          ...prev,
+          adminOne: [...prev.adminOne, ...selected],
+        }));
+      }
+      if (targetId === "adminTwo") {
+        if (type === "crew") {
+          alert("Crew not allowed here. Please choose some shift for them");
+          return;
+        }
+        setAdmin((prev) => ({
+          ...prev,
+          adminTwo: [...prev.adminTwo, ...selected],
+        }));
       }
       targetId === "morning" && setMor((prev) => [...prev, ...selected]);
       targetId === "evening" && setEvening((prev) => [...prev, ...selected]);
@@ -127,12 +159,26 @@ const Planning = (p) => {
             ? night.filter((f) => f.matricule === +draggedItem)
             : night.filter((f) => f.crewName === draggedItem);
         }
+        if (zone==="adminOne"){
+          setAdmin(prev=>({
+            ...prev,
+            adminOne:[...prev.adminOne.filter((f) => f.matricule !== +draggedItem)]
+          }))
+          return admin.adminOne.filter((f) => f.matricule === +draggedItem);
+        }
+        if (zone==="adminTwo"){
+          setAdmin(prev=>({
+            ...prev,
+            adminTwo:[...prev.adminTwo.filter((f) => f.matricule !== +draggedItem)]
+          }))
+          return admin.adminTwo.filter((f) => f.matricule === +draggedItem);
+        }
       };
       let selected = selecte();
-      console.log("ruun", selected);
+      console.log("ruun", selected, targetId);
       if (targetId === "night") {
         if (type === "indiv") {
-          if (selected[0].status === "inem") {
+          if (selected[0].status === "inapt") {
             setNotify({
               rend: true,
               data: selected[0],
@@ -140,17 +186,17 @@ const Planning = (p) => {
           }
         } else {
           selected[0].employee.map((m) => {
-            if (m.status === "inem") {
+            if (m.status === "inapt") {
               const selectedf = selected[0].employee.filter(
                 (f) => f.matricule !== m.matricule
               );
-              selected[0].employee=selectedf
+              selected[0].employee = selectedf;
               setNotify({
                 rend: true,
                 data: m,
               });
             }
-            return null
+            return null;
           });
           console.log(notify.data);
           setNight((prev) => [...prev, ...selected]);
@@ -158,36 +204,33 @@ const Planning = (p) => {
       }
       targetId === "morning" && setMor((prev) => [...prev, ...selected]);
       targetId === "evening" && setEvening((prev) => [...prev, ...selected]);
+      targetId === "adminOne" && setAdmin((prev) => ({...prev, adminOne:[...prev.adminOne, ...selected]}));
+      targetId === "adminTwo" && setAdmin((prev) => ({...prev, adminTwo:[...prev.adminTwo, ...selected]}));
     }
   };
 
   return (
     <div className={c.wrapper}>
       {notify.rend && <BackDrop />}
-      {notify.rend && <Notification data={notify.data} click={clicknotify}/>}
+      {notify.rend && <Notification data={notify.data} click={clicknotify} />}
       <div className={c.center}>
-      
-          <div
-            className={`${cs.crewHolderPs} ${cs.crewHolderInfi} ${cs.crewHolderP}`}
-            // onDragOver={handleDragOver}
-            // onDrop={(e) => handleDrop(e, "night")}
-          >
-            <img src={hos} alt="mor" className={cs.imgsh} />
-            {sicknessData.length > 0 ? (
-              sicknessData.map((m, i) => (
-                <span
-                  key={i}
-                  style={{cursor:"pointer"}}
-                >
-                  {m.matricule}
-                </span>
-              ))
-            ) : (
-              <h1 className={cs.notFound}>NO Item</h1>
-            )}
-            
-          </div>
-       
+        <div
+          className={`${cs.crewHolderPs} ${cs.crewHolderInfi} ${cs.crewHolderP}`}
+          // onDragOver={handleDragOver}
+          // onDrop={(e) => handleDrop(e, "night")}
+        >
+          <img src={hos} alt="mor" className={cs.imgsh} draggable={false} />
+          {sicknessData.length > 0 ? (
+            sicknessData.map((m, i) => (
+              <span key={i} style={{ cursor: "pointer" }}>
+                {m.matricule}
+              </span>
+            ))
+          ) : (
+            <h1 className={cs.notFound}>NO Item</h1>
+          )}
+        </div>
+
         <div className={c.content}>
           <div className={cs.crewHolderP}>
             <h1 className={cs.title}>crews</h1>
@@ -229,7 +272,7 @@ const Planning = (p) => {
             onDragOver={handleDragOver}
             onDrop={(e) => handleDrop(e, "morning")}
           >
-            <img src={morning} alt="mor" className={cs.img} />
+            <img src={morning} alt="mor" className={cs.img} draggable={false} />
             {mor.length === 0 ? (
               <h1 className={cs.notFound}>NO Item</h1>
             ) : (
@@ -263,7 +306,12 @@ const Planning = (p) => {
             onDragOver={handleDragOver}
             onDrop={(e) => handleDrop(e, "evening")}
           >
-            <img src={eveningpic} alt="mor" className={cs.img} />
+            <img
+              src={eveningpic}
+              alt="mor"
+              className={cs.img}
+              draggable={false}
+            />
 
             {evening.length === 0 ? (
               <h1 className={cs.notFound}>NO Item</h1>
@@ -298,7 +346,12 @@ const Planning = (p) => {
             onDragOver={handleDragOver}
             onDrop={(e) => handleDrop(e, "night")}
           >
-            <img src={nightPic} alt="mor" className={cs.img} />
+            <img
+              src={nightPic}
+              alt="mor"
+              className={cs.img}
+              draggable={false}
+            />
             {night.length === 0 ? (
               <h1 className={cs.notFound}>NO Item</h1>
             ) : (
@@ -332,21 +385,49 @@ const Planning = (p) => {
           <h1 className={cs.titles}>Admin</h1>
           <div
             className={`${cs.crewHolderPs} ${cs.crewHolderAdmin} ${cs.crewHolderP}`}
-            // onDragOver={handleDragOver}
-            // onDrop={(e) => handleDrop(e, "morning")}
+            onDragOver={handleDragOver}
+            onDrop={(e) => handleDrop(e, "adminOne")}
           >
-            <img src={enAm} alt="mor" className={cs.imgs} />
-            <img src={enpm} alt="mor" className={cs.imgss} />
-            <h1 className={cs.notFound}>NO Item</h1>
+            <img src={enAm} alt="mor" className={cs.imgs} draggable={false} />
+            <img src={enpm} alt="mor" className={cs.imgss} draggable={false} />
+            {admin.adminOne.length === 0 ? (
+              <h1 className={cs.notFound}>NO Item</h1>
+            ) : (
+              admin.adminOne.map((m, i) => (
+                <span
+                  key={i}
+                  draggable
+                  onDragStart={(e) =>
+                    handleDragStart(e, m.matricule, "indiv", "adminOne")
+                  }
+                >
+                  {m.matricule}
+                </span>
+              ))
+            )}
           </div>
           <div
             className={`${cs.crewHolderPs} ${cs.crewHolderAdmin} ${cs.crewHolderP}`}
-            // onDragOver={handleDragOver}
-            // onDrop={(e) => handleDrop(e, "night")}
+            onDragOver={handleDragOver}
+            onDrop={(e) => handleDrop(e, "adminTwo")}
           >
-            <img src={enAm} alt="mor" className={cs.imgs} />
-            <img src={enpmt} alt="mor" className={cs.imgss} />
-            <h1 className={cs.notFound}>NO Item</h1>
+            <img src={enAm} alt="mor" className={cs.imgs} draggable={false} />
+            <img src={enpmt} alt="mor" className={cs.imgss} draggable={false} />
+            {admin.adminTwo.length === 0 ? (
+              <h1 className={cs.notFound}>NO Item</h1>
+            ) : (
+              admin.adminTwo.map((m, i) => (
+                <span
+                  key={i}
+                  draggable
+                  onDragStart={(e) =>
+                    handleDragStart(e, m.matricule, "indiv", "adminTwo")
+                  }
+                >
+                  {m.matricule}
+                </span>
+              ))
+            )}
           </div>
         </div>
       </div>

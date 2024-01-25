@@ -57,8 +57,10 @@ const CrewIndiData = (p) => {
                   style={
                     m.status === "infirmity"
                       ? { backgroundColor: "#393E41" }
-                      : m.status === "inem"
+                      : m.status === "inapt"
                       ? { backgroundColor: "#3D305F" }
+                      :  m.status === "ctp"
+                      ? {backgroundColor:"#02383C"}
                       : {}
                   }
                 >
@@ -79,8 +81,10 @@ const CrewIndiData = (p) => {
                   style={
                     m.status === "infirmity"
                       ? { backgroundColor: "#393E41" }
-                      : m.status === "inem"
+                      : m.status === "inapt"
                       ? { backgroundColor: "#3D305F" }
+                      : m.status === "ctp"
+                      ? {backgroundColor:"#02383C"}
                       : {}
                   }
                 >
