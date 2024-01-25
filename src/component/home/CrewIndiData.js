@@ -1,11 +1,16 @@
 import { useState } from "react";
 import c from "./CrewIndiData.module.css";
+import SelectDrop from "../ui/SelectDrop";
+import BackDrop from "../ui/BackDrop";
 
 const CrewIndiData = (p) => {
   console.log("ddd", p.data);
   const [data, setData] = useState(
     p.data.status === "crews" && p.data.data[0].employee
   );
+    const [changePar, setChangePar]=useState(false);
+
+    
   const [inputValue, setInputValue] = useState("");
   const changeHandler = (e) => {
     console.log(e.target.value, data);
@@ -22,8 +27,16 @@ const CrewIndiData = (p) => {
       }
     }
   };
+
+  const changeParada=e=>{
+
+    setChangePar(true);
+  }
+  
   return (
     <div className={c.holder}>
+    {changePar&& <SelectDrop /> }
+    {changePar&& <BackDrop /> }
       <h1 className={c.title}>{p.data.name} Details </h1>
       {p.data.status === "crews" && (
         <input
@@ -71,7 +84,7 @@ const CrewIndiData = (p) => {
                   <td>{m.crew}</td>
                   <td>{m.plannigLeader}</td>
                   <td className={c.spec}>{m.userLeader}</td>
-                  <td className={c.spec}>{m.parada}</td>
+                  <td className={c.spec} onClick={changeParada}>{m.parada}</td>
                   <td className={c.spec}>{m.status} </td>
                 </tr>
               ))
@@ -95,7 +108,7 @@ const CrewIndiData = (p) => {
                   <td>{m.crew}</td>
                   <td>{m.plannigLeader}</td>
                   <td className={c.spec}>{m.userLeader}</td>
-                  <td className={c.spec}>{m.parada}</td>
+                  <td className={c.spec} onClick={changeParada}>{m.parada}</td>
                   <td>{m.status}</td>
                 </tr>
               ))}
