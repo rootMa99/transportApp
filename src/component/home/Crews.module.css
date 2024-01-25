@@ -145,3 +145,63 @@
   width: 4rem;
   left: -0.5rem;
 }
+
+.btnHolder {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 3rem;
+}
+.btnHolder button {
+    width: 30%;
+  outline: none;
+  cursor: pointer;
+  border: none;
+  padding: 10px 2rem;
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  position: relative;
+  display: inline-block;
+  letter-spacing: 0.05rem;
+  font-weight: 700;
+  font-size: 17px;
+  border-radius: 5px;
+  overflow: hidden;
+  background: #f84018;
+  color: ghostwhite;
+}
+
+.btnHolder button span {
+  position: relative;
+  z-index: 10;
+  transition: color 0.4s;
+  text-transform: uppercase;
+}
+
+.btnHolder button:hover span {
+  color: black;
+}
+
+.btnHolder button::before,
+.btnHolder button::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.btnHolder button::before {
+  content: "";
+  background: #8b1f04;
+  width: 120%;
+  left: -10%;
+  transform: skew(30deg);
+  transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+}
+
+.btnHolder button:hover::before {
+  transform: translate3d(100%, 0, 0);
+}

@@ -141,40 +141,52 @@ const Planning = (p) => {
     } else {
       const selecte = () => {
         if (zone === "morning") {
-          if (targetId === "adminOne" || targetId === "adminTwo") {
-            return;
+          if (type === "indiv") {
+            setMor((prev) => [
+              ...prev.filter((f) => f.matricule !== +draggedItem),
+            ]);
+          } else {
+            if (targetId === "adminOne" || targetId === "adminTwo") {
+              return;
+            }
+            setMor((prev) => [
+              ...prev.filter((f) => f.crewName !== draggedItem),
+            ]);
           }
-          type === "indiv"
-            ? setMor((prev) => [
-                ...prev.filter((f) => f.matricule !== +draggedItem),
-              ])
-            : setMor((prev) => [
-                ...prev.filter((f) => f.crewName !== draggedItem),
-              ]);
           return type === "indiv"
             ? mor.filter((f) => f.matricule === +draggedItem)
             : mor.filter((f) => f.crewName === draggedItem);
         }
         if (zone === "evening") {
-          type === "indiv"
-            ? setEvening((prev) => [
-                ...prev.filter((f) => f.matricule !== +draggedItem),
-              ])
-            : setEvening((prev) => [
-                ...prev.filter((f) => f.crewName !== draggedItem),
-              ]);
+          if (type === "indiv") {
+            setEvening((prev) => [
+              ...prev.filter((f) => f.matricule !== +draggedItem),
+            ]);
+          } else {
+            if (targetId === "adminOne" || targetId === "adminTwo") {
+              return;
+            }
+            setEvening((prev) => [
+              ...prev.filter((f) => f.crewName !== draggedItem),
+            ]);
+          }
           return type === "indiv"
             ? evening.filter((f) => f.matricule === +draggedItem)
             : evening.filter((f) => f.crewName === draggedItem);
         }
         if (zone === "night") {
-          type === "indiv"
-            ? setNight((prev) => [
-                ...prev.filter((f) => f.matricule !== +draggedItem),
-              ])
-            : setNight((prev) => [
-                ...prev.filter((f) => f.crewName !== draggedItem),
-              ]);
+          if (type === "indiv") {
+            setNight((prev) => [
+              ...prev.filter((f) => f.matricule !== +draggedItem),
+            ]);
+          } else {
+            if (targetId === "adminOne" || targetId === "adminTwo") {
+              return;
+            }
+            setNight((prev) => [
+              ...prev.filter((f) => f.crewName !== draggedItem),
+            ]);
+          }
           return type === "indiv"
             ? night.filter((f) => f.matricule === +draggedItem)
             : night.filter((f) => f.crewName === draggedItem);
@@ -199,7 +211,7 @@ const Planning = (p) => {
         }
       };
       let selected = selecte();
-      console.log("ruun", selected, targetId);
+      console.log("ruun", selected, targetId, zone);
       if (targetId === "night") {
         if (type === "indiv") {
           if (selected[0].status === "inapt") {
@@ -498,6 +510,15 @@ const Planning = (p) => {
             )}
           </div>
         </div>
+      </div>
+      <div className={cs.btnHolder}>
+        <button
+          onClick={() => {
+            alert("enough is enough");
+          }}
+        >
+          <span>submit</span>
+        </button>
       </div>
     </div>
   );
