@@ -9,6 +9,7 @@ import enAm from "../../assets/8am.png";
 import enpm from "../../assets/16h.png";
 import enpmt from "../../assets/17h.png";
 import hos from "../../assets/hos.png";
+import inact from "../../assets/inact.png";
 import { getCrewsfilter, getIndivFilter } from "../hooks/getCrews";
 import { useState } from "react";
 import Notification from "./Notification";
@@ -35,8 +36,23 @@ const Planning = (p) => {
     adminTwo: [],
   });
   const [notify, setNotify] = useState({ rend: false, data: {} });
+  const [inactive, setInactive] = useState(
+    data.filter((f) => f.status === "ctp")
+  );
   console.log(crews, individuals, night, type, zone);
-  console.log("zone", mor, evening, night, admin.adminOne, admin.adminTwo);
+  console.log(
+    "zone",
+    "mor",
+    mor,
+    "eve",
+    evening,
+    "nig",
+    night,
+    "ad1",
+    admin.adminOne,
+    "ad2",
+    admin.adminTwo
+  );
 
   const sicknessData = data.filter((f) => f.status === "infirmity");
   const handleDragStart = (e, id, type, zone) => {
@@ -48,6 +64,7 @@ const Planning = (p) => {
     setNotify({ rend: false, data: {} });
     type === "morning" && setMor((prev) => [...prev, data]);
     type === "evening" && setEvening((prev) => [...prev, data]);
+    type === "ctp" && setInactive((prev) => [...prev, data]);
   };
 
   const handleDragOver = (e) => {
@@ -124,6 +141,9 @@ const Planning = (p) => {
     } else {
       const selecte = () => {
         if (zone === "morning") {
+          if (targetId === "adminOne" || targetId === "adminTwo") {
+            return;
+          }
           type === "indiv"
             ? setMor((prev) => [
                 ...prev.filter((f) => f.matricule !== +draggedItem),
@@ -159,18 +179,22 @@ const Planning = (p) => {
             ? night.filter((f) => f.matricule === +draggedItem)
             : night.filter((f) => f.crewName === draggedItem);
         }
-        if (zone==="adminOne"){
-          setAdmin(prev=>({
+        if (zone === "adminOne") {
+          setAdmin((prev) => ({
             ...prev,
-            adminOne:[...prev.adminOne.filter((f) => f.matricule !== +draggedItem)]
-          }))
+            adminOne: [
+              ...prev.adminOne.filter((f) => f.matricule !== +draggedItem),
+            ],
+          }));
           return admin.adminOne.filter((f) => f.matricule === +draggedItem);
         }
-        if (zone==="adminTwo"){
-          setAdmin(prev=>({
+        if (zone === "adminTwo") {
+          setAdmin((prev) => ({
             ...prev,
-            adminTwo:[...prev.adminTwo.filter((f) => f.matricule !== +draggedItem)]
-          }))
+            adminTwo: [
+              ...prev.adminTwo.filter((f) => f.matricule !== +draggedItem),
+            ],
+          }));
           return admin.adminTwo.filter((f) => f.matricule === +draggedItem);
         }
       };
@@ -199,13 +223,27 @@ const Planning = (p) => {
             return null;
           });
           console.log(notify.data);
-          setNight((prev) => [...prev, ...selected]);
         }
+        setNight((prev) => [...prev, ...selected]);
       }
       targetId === "morning" && setMor((prev) => [...prev, ...selected]);
       targetId === "evening" && setEvening((prev) => [...prev, ...selected]);
-      targetId === "adminOne" && setAdmin((prev) => ({...prev, adminOne:[...prev.adminOne, ...selected]}));
-      targetId === "adminTwo" && setAdmin((prev) => ({...prev, adminTwo:[...prev.adminTwo, ...selected]}));
+      if (targetId === "adminOne") {
+        type === "indiv"
+          ? setAdmin((prev) => ({
+              ...prev,
+              adminOne: [...prev.adminOne, ...selected],
+            }))
+          : alert("not allowed!");
+      }
+      if (targetId === "adminTwo") {
+        type === "indiv"
+          ? setAdmin((prev) => ({
+              ...prev,
+              adminTwo: [...prev.adminTwo, ...selected],
+            }))
+          : alert("not allowed!");
+      }
     }
   };
 
@@ -219,9 +257,34 @@ const Planning = (p) => {
           // onDragOver={handleDragOver}
           // onDrop={(e) => handleDrop(e, "night")}
         >
+          <h1 className={cs.titless}>infirmity</h1>
+
           <img src={hos} alt="mor" className={cs.imgsh} draggable={false} />
           {sicknessData.length > 0 ? (
             sicknessData.map((m, i) => (
+              <span key={i} style={{ cursor: "pointer" }}>
+                {m.matricule}
+              </span>
+            ))
+          ) : (
+            <h1 className={cs.notFound}>NO Item</h1>
+          )}
+        </div>
+        <div
+          className={`${cs.crewHolderPs} ${cs.crewHolderInfi} ${cs.crewHolderP}`}
+          // onDragOver={handleDragOver}
+          // onDrop={(e) => handleDrop(e, "night")}
+        >
+          <img
+            src={inact}
+            alt="mor"
+            className={`${cs.img} ${cs.imgIn}`}
+            draggable={false}
+          />
+
+          <h1 className={cs.titless}>inactive</h1>
+          {inactive.length > 0 ? (
+            inactive.map((m, i) => (
               <span key={i} style={{ cursor: "pointer" }}>
                 {m.matricule}
               </span>
@@ -273,6 +336,8 @@ const Planning = (p) => {
             onDrop={(e) => handleDrop(e, "morning")}
           >
             <img src={morning} alt="mor" className={cs.img} draggable={false} />
+            {/* <h1 className={cs.titler}>morning</h1> */}
+
             {mor.length === 0 ? (
               <h1 className={cs.notFound}>NO Item</h1>
             ) : (
@@ -312,6 +377,7 @@ const Planning = (p) => {
               className={cs.img}
               draggable={false}
             />
+            {/* <h1 className={cs.titler}>evening</h1> */}
 
             {evening.length === 0 ? (
               <h1 className={cs.notFound}>NO Item</h1>
@@ -352,6 +418,8 @@ const Planning = (p) => {
               className={cs.img}
               draggable={false}
             />
+            {/* <h1 className={cs.titler}>night</h1> */}
+
             {night.length === 0 ? (
               <h1 className={cs.notFound}>NO Item</h1>
             ) : (

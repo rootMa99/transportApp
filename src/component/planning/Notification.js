@@ -11,7 +11,6 @@ const Notification = (p) => {
     }
     const ctp=(e)=>{
         p.click(e, "ctp", p.data);
-
     }
 
 
