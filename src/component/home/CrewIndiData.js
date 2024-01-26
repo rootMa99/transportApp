@@ -6,15 +6,13 @@ import BackDrop from "../ui/BackDrop";
 
 const CrewIndiData = (p) => {
   //const { data } = useSelector((s) => s.datas);
-  
+
   console.log("ddd", p.data);
   const [data, setData] = useState(
     p.data.status === "crews" && p.data.data[0].employee
   );
-    const [changePar, setChangePar]=useState(false);
-    const [matricule, setMatricule]=useState(null);
-
-    
+  const [changePar, setChangePar] = useState(false);
+  const [matricule, setMatricule] = useState(null);
   const [inputValue, setInputValue] = useState("");
   const changeHandler = (e) => {
     console.log(e.target.value, data);
@@ -32,18 +30,20 @@ const CrewIndiData = (p) => {
     }
   };
 
-  const changeParada=(e, matricule)=>{
+  const changeParada = (e, matricule) => {
     setMatricule(matricule);
     setChangePar(true);
-  }
-  const closeParada=e=>{
+  };
+  const closeParada = (e) => {
     setChangePar(false);
-  }
-  
+  };
+
   return (
     <div className={c.holder}>
-    {changePar&& <SelectDrop closeParada={closeParada} matricule={matricule}/> }
-    {changePar&& <BackDrop /> }
+      {changePar && (
+        <SelectDrop closeParada={closeParada} matricule={matricule} />
+      )}
+      {changePar && <BackDrop />}
       <h1 className={c.title}>{p.data.name} Details </h1>
       {p.data.status === "crews" && (
         <input
@@ -79,8 +79,8 @@ const CrewIndiData = (p) => {
                       ? { backgroundColor: "#393E41" }
                       : m.status === "inapt"
                       ? { backgroundColor: "#3D305F" }
-                      :  m.status === "ctp"
-                      ? {backgroundColor:"#02383C"}
+                      : m.status === "ctp"
+                      ? { backgroundColor: "#02383C" }
                       : {}
                   }
                 >
@@ -91,7 +91,12 @@ const CrewIndiData = (p) => {
                   <td>{m.crew}</td>
                   <td>{m.plannigLeader}</td>
                   <td className={c.spec}>{m.userLeader}</td>
-                  <td className={c.spec} onClick={(e)=> changeParada(e, m.matricule)}>{m.parada}</td>
+                  <td
+                    className={c.spec}
+                    onClick={(e) => changeParada(e, m.matricule)}
+                  >
+                    {m.parada}
+                  </td>
                   <td className={c.spec}>{m.status} </td>
                 </tr>
               ))
@@ -104,7 +109,7 @@ const CrewIndiData = (p) => {
                       : m.status === "inapt"
                       ? { backgroundColor: "#3D305F" }
                       : m.status === "ctp"
-                      ? {backgroundColor:"#02383C"}
+                      ? { backgroundColor: "#02383C" }
                       : {}
                   }
                 >
@@ -115,7 +120,12 @@ const CrewIndiData = (p) => {
                   <td>{m.crew}</td>
                   <td>{m.plannigLeader}</td>
                   <td className={c.spec}>{m.userLeader}</td>
-                  <td className={c.spec} onClick={(e)=> changeParada(e, m.matricule)}>{m.parada}</td>
+                  <td
+                    className={c.spec}
+                    onClick={(e) => changeParada(e, m.matricule)}
+                  >
+                    {m.parada}
+                  </td>
                   <td>{m.status}</td>
                 </tr>
               ))}

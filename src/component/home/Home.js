@@ -10,8 +10,7 @@ const Home = (p) => {
 
   const getSelectedData = (data, status, name) => {
     setSelectedData(false);
-    setTimeout(()=>setSelectedData({ data, status, name }), 100)
-    // setSelectedData({ data, status, name });
+    setTimeout(()=>setSelectedData({ data, status, name }), 100);
   };
   console.log(selectedData);
 
