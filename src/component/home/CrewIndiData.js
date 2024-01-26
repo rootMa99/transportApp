@@ -8,7 +8,7 @@ const CrewIndiData = (p) => {
   const { datac } = useSelector((s) => s.datas);
   console.log("runing....");
 
-  console.log("ddd", p.data);
+  console.log("ddd", datac);
   const [data, setData] = useState(
     datac.status === "crews" && datac.data[0].employee
   );

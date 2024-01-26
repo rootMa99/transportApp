@@ -28,7 +28,7 @@ const Home = (p) => {
             setDataSelected={getSelectedData}
           />
         </div>
-        {selectedData && <CrewIndiData  setDataSelected={getSelectedData}/>}
+        {selectedData && <CrewIndiData data={data}  setDataSelected={getSelectedData}/>}
       </div>
     </div>
   );

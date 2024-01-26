@@ -27,7 +27,7 @@ const DataSlice = createSlice({
               );
               console.log(index);
               if (index !== -1) {
-                s.datac.data[index] = { ...s.data[index], parada: p.payload.parada };
+                s.datac.data[index] = { ...s.datac.data[index], parada: p.payload.parada };
               }
         }else{
             s.datac.data = p.payload.data;
