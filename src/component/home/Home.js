@@ -8,9 +8,9 @@ const Home = (p) => {
   const { data } = useSelector((s) => s.datas);
   const [selectedData, setSelectedData] = useState(false);
 
-  const getSelectedData = (data, status, name) => {
+  const getSelectedData = () => {
     setSelectedData(false);
-    setTimeout(()=>setSelectedData({ data, status, name }), 100);
+    setTimeout(()=>setSelectedData(true), 100);
   };
   console.log(selectedData);
 
@@ -28,7 +28,7 @@ const Home = (p) => {
             setDataSelected={getSelectedData}
           />
         </div>
-        {selectedData && <CrewIndiData data={selectedData} />}
+        {selectedData && <CrewIndiData  setDataSelected={getSelectedData}/>}
       </div>
     </div>
   );

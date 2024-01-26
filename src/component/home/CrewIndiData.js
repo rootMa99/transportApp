@@ -2,21 +2,22 @@ import { useState } from "react";
 import c from "./CrewIndiData.module.css";
 import SelectDrop from "../ui/SelectDrop";
 import BackDrop from "../ui/BackDrop";
-//import { useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 
 const CrewIndiData = (p) => {
-  //const { data } = useSelector((s) => s.datas);
+  const { datac } = useSelector((s) => s.datas);
+  console.log("runing....");
 
   console.log("ddd", p.data);
   const [data, setData] = useState(
-    p.data.status === "crews" && p.data.data[0].employee
+    datac.status === "crews" && datac.data[0].employee
   );
   const [changePar, setChangePar] = useState(false);
   const [matricule, setMatricule] = useState(null);
   const [inputValue, setInputValue] = useState("");
   const changeHandler = (e) => {
     console.log(e.target.value, data);
-    setData(p.data.data[0].employee);
+    setData(datac.data[0].employee);
     const value = e.target.value;
     if (/^\d*$/.test(value)) {
       setInputValue(value);
@@ -41,11 +42,15 @@ const CrewIndiData = (p) => {
   return (
     <div className={c.holder}>
       {changePar && (
-        <SelectDrop closeParada={closeParada} matricule={matricule} />
+        <SelectDrop
+          closeParada={closeParada}
+          matricule={matricule}
+          setDataSelected={p.setDataSelected}
+        />
       )}
       {changePar && <BackDrop />}
-      <h1 className={c.title}>{p.data.name} Details </h1>
-      {p.data.status === "crews" && (
+      <h1 className={c.title}>{datac.name} Details </h1>
+      {datac.status === "crews" && (
         <input
           className={c.input}
           type="text"
@@ -70,7 +75,7 @@ const CrewIndiData = (p) => {
           </tr>
         </thead>
         <tbody>
-          {p.data.status === "crews"
+          {datac.status === "crews"
             ? data.map((m, i) => (
                 <tr
                   key={i}
@@ -100,7 +105,7 @@ const CrewIndiData = (p) => {
                   <td className={c.spec}>{m.status} </td>
                 </tr>
               ))
-            : p.data.data.map((m, i) => (
+            : datac.data.map((m, i) => (
                 <tr
                   key={i}
                   style={

@@ -1,32 +1,39 @@
+import { useDispatch, useSelector } from "react-redux";
 import { getCrewsfilter, getIndivFilter } from "../hooks/getCrews";
 import c from "./Crews.module.css";
+import { dataSliceAction } from "../store/DataSlice";
 
 const Crews = (p) => {
-  console.log(p.data);
-  let data =
-    p.title === "crews" ? getCrewsfilter(p.data) : getIndivFilter(p.data);
+  const { data } = useSelector((s) => s.datas);
+  const dispatch=useDispatch();
+
   console.log(data);
+  let datas =
+    p.title === "crews" ? getCrewsfilter(data) : getIndivFilter(data);
+  console.log(datas);
   const ClickHandler = (name) => {
     console.log(name);
     if (p.title === "crews") {
-      p.setDataSelected(
-        data.filter((f) => f.crewName === name),
-        p.title,
-        name
-      );
+      p.setDataSelected();
+      dispatch(dataSliceAction.setDatac({
+        data:datas.filter((f) => f.crewName === name),
+        status:p.title,
+        name: name
+      }))
     } else {
-      p.setDataSelected(
-        data.filter((f) => f.matricule === name),
-        p.title,
-        name
-      );
+      p.setDataSelected();
+      dispatch(dataSliceAction.setDatac({
+        data:datas.filter((f) => f.matricule === name),
+        status: p.title,
+        name: name
+      }))
     }
   };
   return (
     <div className={c.crewHolder}>
       <h1 className={c.title}>{p.title}</h1>
-      {data.length > 0 ? (
-        data.map((m, i) => (
+      {datas.length > 0 ? (
+        datas.map((m, i) => (
           <span
             key={i}
             onClick={() =>

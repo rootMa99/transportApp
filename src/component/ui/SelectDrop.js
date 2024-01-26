@@ -89,7 +89,9 @@ const SelectDrop = (p) => {
   
   const clickHandler=e=>{
     dispatch(dataSliceAction.changeParada({parada:parada, matricule:p.matricule}));
+    dispatch(dataSliceAction.setDatac({parada:parada, matricule:p.matricule, changeParada:true}))
     p.closeParada();
+    p.setDataSelected()
   }
   return (
     <div className={c.changeParadaStatus}>
