@@ -2,7 +2,7 @@ import { useState } from "react";
 import c from "./CrewIndiData.module.css";
 import SelectDrop from "../ui/SelectDrop";
 import BackDrop from "../ui/BackDrop";
-import { useSelector } from "react-redux";
+//import { useSelector } from "react-redux";
 
 const CrewIndiData = (p) => {
   //const { data } = useSelector((s) => s.datas);

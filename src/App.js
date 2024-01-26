@@ -21,7 +21,7 @@ function App() {
         <Suspense>
           <Routes>
             <Route index path="/" element={<Navigate replace to="/home" />} />
-            <Route exact path="/home" element={<Home />} />
+            <Route exact path="/home" element={<Home data={data}/>} />
             <Route exact path="/planning" element={<Planning />} />
             <Route
               exact
