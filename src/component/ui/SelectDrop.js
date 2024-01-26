@@ -1,5 +1,9 @@
 import Select from "react-select";
 import c from "./SelectDrop.module.css";
+import { PARADA_DATA } from "../../DEMO_DATA";
+import { useDispatch } from "react-redux";
+import { dataSliceAction } from "../store/DataSlice";
+import { useState } from "react";
 const customStyles = {
   control: (provided, state) => ({
     ...provided,
@@ -65,14 +69,32 @@ const customStyles = {
 };
 
 const SelectDrop = (p) => {
+  const dispatch=useDispatch();
+  const [parada, setParada]=useState();
   const optionData = [];
+  if(optionData.length===0){
+    PARADA_DATA.map(m=>(
+      optionData.push({ value: m.Adresse, label: m.Adresse })
+    ))
+  }
 
-  const changeHandler = (e) => {};
+  const changeHandler = (e) => {
+    setParada(e.value);
 
+  };
+  
+  const closeHandler = (e) => {
+    p.closeParada();
+  };
+  
+  const clickHandler=e=>{
+    dispatch(dataSliceAction.changeParada({parada:parada, matricule:p.matricule}));
+    p.closeParada();
+  }
   return (
     <div className={c.changeParadaStatus}>
       <div className={c.cancel}>
-        <button className={c["menu__icon"]}></button>
+        <button className={c["menu__icon"]} onClick={closeHandler}></button>
       </div>
       <h1 className={c.title}>choose parada</h1>
       <div className={c.selectContainer}>
@@ -87,9 +109,7 @@ const SelectDrop = (p) => {
       </div>
       <div className={c.btnHolder}>
         <button
-          onClick={() => {
-            alert("enough is enough");
-          }}
+          onClick={clickHandler}
         >
           <span>submit</span>
         </button>

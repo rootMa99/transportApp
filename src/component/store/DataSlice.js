@@ -25,6 +25,13 @@ const DataSlice = createSlice(
                 if(s.infirmityData.length===0){
                     s.infirmityData.push(...p.payload)
                 }
+            },
+            changeParada(s,p){
+                const index= s.data.findIndex(f=>f.matricule===p.payload.matricule);
+                console.log(index);
+                if(index!==-1){
+                    s.data[index]={...s.data[index], parada:p.payload.parada};
+                }
             }
         }
     }
