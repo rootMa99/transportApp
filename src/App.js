@@ -8,7 +8,7 @@ import Home from "./component/home/Home";
 import Planning from "./component/planning/Planning";
 
 function App() {
-  const { isLoged, data } = useSelector((s) => s.datas);
+  const { isLoged, data, plannedData} = useSelector((s) => s.datas);
 
   console.log(isLoged, data);
 
@@ -30,7 +30,7 @@ function App() {
         <Suspense>
           <Routes>
             <Route index path="/" element={<Navigate replace to="/rootHome" />} />
-            <Route exact path="/rootHome" element={<Home data={data} />} />
+            <Route exact path="/rootHome" element={<Home data={plannedData} />} />
           </Routes>
         </Suspense>
       )}

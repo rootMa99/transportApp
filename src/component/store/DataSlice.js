@@ -7,8 +7,12 @@ const DataSlice = createSlice({
     data: [],
     dataRoot:[],
     datac: { data: [], status: "", name: "" },
+    plannedData:[]
   },
   reducers: {
+    setPlannedData(s,p){
+      s.plannedData(p.payload)
+    },
     setLogin(s, p) {
       s.isLoged.login = true;
       s.isLoged.role = p.payload

@@ -9,8 +9,8 @@ const Notification = (p) => {
         p.click(e, "evening", p.data);
         
     }
-    const ctp=(e)=>{
-        p.click(e, "ctp", p.data);
+    const inactive=(e)=>{
+        p.click(e, "inactive", p.data);
     }
 
 
@@ -26,7 +26,7 @@ const Notification = (p) => {
       <div className={c.btnHolder}>
         <button onClick={morning}><span>morning</span></button>
         <button onClick={evening}><span>evening</span></button>
-        <button onClick={ctp}><span>ctp</span></button>
+        <button onClick={inactive}><span>inactive</span></button>
       </div>
     </div>
   );

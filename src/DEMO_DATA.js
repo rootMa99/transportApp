@@ -131,7 +131,7 @@ export const DEMO_DATA=[
         userLeader:"youness douihry",
         crew:"R01B",
         parada:"ANASI CAFE PRESTIGE",
-        status:"ctp"
+        status:"inactive"
     },
     {
         matricule:6020,
@@ -252,7 +252,7 @@ export const DEMO_DATA=[
         userLeader:"youness douihry",
         crew:"K01A",
         parada:"OUISLANE HAY NASR CAFE ASAFI",
-        status:"ctp"
+        status:"inactive"
     },
     {
         matricule:5563,
@@ -387,7 +387,7 @@ export const DEMO_DATA=[
         status:"available"
     },
     {
-        matricule:2001,
+        matricule:2991,
         name:"WARDI",
         lastName:"FATIMA ZAHRA",
         category:"DH",
@@ -395,7 +395,7 @@ export const DEMO_DATA=[
         userLeader:"youness douihry",
         crew:"K01A",
         parada:"MARJANE USINE YOURA",
-        status:"ctp"
+        status:"inactive"
     },
     {
         matricule:6001,
@@ -417,7 +417,7 @@ export const DEMO_DATA=[
         userLeader:"youness douihry",
         crew:null,
         parada:"SEBATA NIYABA",
-        status:"ctp"
+        status:"inactive"
     },
     {
         matricule:4093,
@@ -428,7 +428,7 @@ export const DEMO_DATA=[
         userLeader:"youness douihry",
         crew:null,
         parada:"AGDAL TAXI",
-        status:"ctp"
+        status:"inactive"
     },
 
 ];
@@ -1702,4 +1702,361 @@ export const USER=[
         password:"9099",
         role:"root",
     },
-]
+];
+
+export const PLANNEDDATA={
+    "morning": [
+        {
+            "crewName": "R05B",
+            "employee": [
+                {
+                    "matricule": 8029,
+                    "name": "LACHKER",
+                    "lastName": "MARYEM",
+                    "category": "DH",
+                    "plannigLeader": "amine tayia",
+                    "userLeader": "youness douihry",
+                    "crew": "R05B",
+                    "parada": "OUISLANE DAR CHABAB BMCE",
+                    "status": "available"
+                }
+            ]
+        },
+        {
+            "crewName": "R01B",
+            "employee": [
+                {
+                    "matricule": 7200,
+                    "name": "LOTFI",
+                    "lastName": "DRISS",
+                    "category": "DH",
+                    "plannigLeader": "amine tayia",
+                    "userLeader": "youness douihry",
+                    "crew": "R01B",
+                    "parada": "BNI MHAMED PHARMACIE AL HORIA",
+                    "status": "available"
+                },
+                {
+                    "matricule": 7575,
+                    "name": "ABDLHAK",
+                    "lastName": "MOUJAHID",
+                    "category": "DH",
+                    "plannigLeader": "amine tayia",
+                    "userLeader": "youness douihry",
+                    "crew": "R01B",
+                    "parada": "OUISLANE PHARMACIE AL HIKMA",
+                    "status": "available"
+                },
+                {
+                    "matricule": 6738,
+                    "name": "ECHACHA",
+                    "lastName": "TARIK",
+                    "category": "DH",
+                    "plannigLeader": "amine tayia",
+                    "userLeader": "youness douihry",
+                    "crew": "R01B",
+                    "parada": "OUISLANE PHARMACIE AL HIKMA",
+                    "status": "inapt"
+                },
+                {
+                    "matricule": 4927,
+                    "name": "HAMDNI",
+                    "lastName": "FATIMA",
+                    "category": "DH",
+                    "plannigLeader": "amine tayia",
+                    "userLeader": "youness douihry",
+                    "crew": "R01B",
+                    "parada": "NAIM CAFE SARAHA",
+                    "status": "available"
+                },
+                {
+                    "matricule": 3902,
+                    "name": "EL OUAFI",
+                    "lastName": "AYOUB",
+                    "category": "DH",
+                    "plannigLeader": "amine tayia",
+                    "userLeader": "youness douihry",
+                    "crew": "R01B",
+                    "parada": "ANASI CAFE PRESTIGE",
+                    "status": "available"
+                },
+                {
+                    "matricule": 3302,
+                    "name": "LAAMECH",
+                    "lastName": "ZINEB",
+                    "category": "DH",
+                    "plannigLeader": "amine tayia",
+                    "userLeader": "youness douihry",
+                    "crew": "R01B",
+                    "parada": "OUISLANE DAR CHABAB BMCE",
+                    "status": "available"
+                },
+                {
+                    "matricule": 9037,
+                    "name": "LAAFAFRA",
+                    "lastName": "KAWTAR",
+                    "category": "DH",
+                    "plannigLeader": "amine tayia",
+                    "userLeader": "youness douihry",
+                    "crew": "R01B",
+                    "parada": "BOUFAKRANE PHARMACIE BOUFAKRANE",
+                    "status": "available"
+                },
+                {
+                    "matricule": 8092,
+                    "name": "ED-DAMGHI",
+                    "lastName": "LAILA",
+                    "category": "DH",
+                    "plannigLeader": "amine tayia",
+                    "userLeader": "youness douihry",
+                    "crew": "R01B",
+                    "parada": "BOUFAKRANE PHARMACIE BOUFAKRANE",
+                    "status": "available"
+                },
+                {
+                    "matricule": 221,
+                    "name": "OUDADA",
+                    "lastName": "AYOUB",
+                    "category": "DH",
+                    "plannigLeader": "amine tayia",
+                    "userLeader": "youness douihry",
+                    "crew": "R01B",
+                    "parada": "BOUFAKRANE PHARMACIE BOUFAKRANE",
+                    "status": "available"
+                }
+            ]
+        }
+    ],
+    "evening": [
+        {
+            "matricule": 211,
+            "name": "BOUKHDILI",
+            "lastName": "OMAR",
+            "category": "DH",
+            "plannigLeader": "amine tayia",
+            "userLeader": "youness douihry",
+            "crew": "K01A",
+            "parada": "BOUFAKRANE CAFE WAD BOUFAKRANE",
+            "status": "inapt"
+        },
+        {
+            "crewName": "R03B",
+            "employee": [
+                {
+                    "matricule": 3792,
+                    "name": "SLASSI",
+                    "lastName": "MOHAMMED",
+                    "category": "DH",
+                    "plannigLeader": "amine tayia",
+                    "userLeader": "youness douihry",
+                    "crew": "R03B",
+                    "parada": "NAIM CAFE SARAHA",
+                    "status": "available"
+                },
+                {
+                    "matricule": 6020,
+                    "name": "HAMADI",
+                    "lastName": "FATIMA ZAHRA",
+                    "category": "DH",
+                    "plannigLeader": "amine tayia",
+                    "userLeader": "youness douihry",
+                    "crew": "R03B",
+                    "parada": "ANASI CAFE PRESTIGE",
+                    "status": "available"
+                }
+            ]
+        }
+    ],
+    "night": [
+        {
+            "crewName": "K01A",
+            "employee": [
+                {
+                    "matricule": 880,
+                    "name": "SRIFI",
+                    "lastName": "MOUAD",
+                    "category": "DH",
+                    "plannigLeader": "amine tayia",
+                    "userLeader": "youness douihry",
+                    "crew": "K01A",
+                    "parada": "BOUFAKRANE CAFE WAD BOUFAKRANE",
+                    "status": "available"
+                },
+                {
+                    "matricule": 61,
+                    "name": "BELKHAYAT",
+                    "lastName": "ABDELWAHAB",
+                    "category": "DH",
+                    "plannigLeader": "amine tayia",
+                    "userLeader": "youness douihry",
+                    "crew": "K01A",
+                    "parada": "OUISLANE HAY NASR CAFE ASAFI",
+                    "status": "available"
+                },
+                {
+                    "matricule": 2201,
+                    "name": "HALBAJ",
+                    "lastName": "MOHAMED",
+                    "category": "DH",
+                    "plannigLeader": "amine tayia",
+                    "userLeader": "youness douihry",
+                    "crew": "K01A",
+                    "parada": "MARJANE USINE YOURA",
+                    "status": "available"
+                },
+                {
+                    "matricule": 2001,
+                    "name": "WARDI",
+                    "lastName": "FATIMA ZAHRA",
+                    "category": "DH",
+                    "plannigLeader": "amine tayia",
+                    "userLeader": "youness douihry",
+                    "crew": "K01A",
+                    "parada": "MARJANE USINE YOURA",
+                    "status": "available"
+                },
+                {
+                    "matricule": 6001,
+                    "name": "OUDADA",
+                    "lastName": "AMAL",
+                    "category": "DH",
+                    "plannigLeader": "amine tayia",
+                    "userLeader": "youness douihry",
+                    "crew": "K01A",
+                    "parada": "SEBATA NIYABA",
+                    "status": "available"
+                },
+                {
+                    "matricule": 3009,
+                    "name": "NASRY",
+                    "lastName": "KHAWLA",
+                    "category": "DH",
+                    "plannigLeader": "amine tayia",
+                    "userLeader": "youness douihry",
+                    "crew": "K01A",
+                    "parada": "SEBATA NIYABA",
+                    "status": "available"
+                },
+                {
+                    "matricule": 4093,
+                    "name": "BATAS",
+                    "lastName": "HASSAN",
+                    "category": "DH",
+                    "plannigLeader": "amine tayia",
+                    "userLeader": "youness douihry",
+                    "crew": "K01A",
+                    "parada": "AGDAL TAXI",
+                    "status": "available"
+                }
+            ]
+        },
+        {
+            "crewName": "R01C",
+            "employee": [
+                {
+                    "matricule": 3,
+                    "name": "ES SAKALI",
+                    "lastName": "MOHAMED",
+                    "category": "DH",
+                    "plannigLeader": "amine tayia",
+                    "userLeader": "youness douihry",
+                    "crew": "R01C",
+                    "parada": "BNI MHAMED PHARMACIE AL HORIA",
+                    "status": "available"
+                },
+                {
+                    "matricule": 7866,
+                    "name": "LAANAYA",
+                    "lastName": "KHAOULA",
+                    "category": "DH",
+                    "plannigLeader": "amine tayia",
+                    "userLeader": "youness douihry",
+                    "crew": "R01C",
+                    "parada": "DOWAR JBALA BARID BANK",
+                    "status": "available"
+                },
+                {
+                    "matricule": 5789,
+                    "name": "SALMI",
+                    "lastName": "ZINEB",
+                    "category": "DH",
+                    "plannigLeader": "amine tayia",
+                    "userLeader": "youness douihry",
+                    "crew": "R01C",
+                    "parada": "DOWAR JBALA BARID BANK",
+                    "status": "available"
+                },
+                {
+                    "matricule": 7868,
+                    "name": "DIAB",
+                    "lastName": "AMINE",
+                    "category": "DH",
+                    "plannigLeader": "amine tayia",
+                    "userLeader": "youness douihry",
+                    "crew": "R01C",
+                    "parada": "NAIM CAFE SARAHA",
+                    "status": "available"
+                }
+            ]
+        }
+    ],
+    "adminOne": [
+        {
+            "matricule": 5563,
+            "name": "STITOU",
+            "lastName": "ANAS",
+            "category": "DH",
+            "plannigLeader": "amine tayia",
+            "userLeader": "youness douihry",
+            "crew": null,
+            "parada": "OUISLANE HAY NASR CAFE ASAFI",
+            "status": "available"
+        },
+        {
+            "matricule": 2201,
+            "name": "HALBAJ",
+            "lastName": "MOHAMED",
+            "category": "DH",
+            "plannigLeader": "amine tayia",
+            "userLeader": "youness douihry",
+            "crew": null,
+            "parada": "MARJANE USINE YOURA",
+            "status": "available"
+        }
+    ],
+    "adminTwo": [
+        {
+            "matricule": 3721,
+            "name": "ZEMMAHI",
+            "lastName": "SIHAM",
+            "category": "DH",
+            "plannigLeader": "amine tayia",
+            "userLeader": "youness douihry",
+            "crew": null,
+            "parada": "MARJANE USINE YOURA",
+            "status": "available"
+        },
+        {
+            "matricule": 61,
+            "name": "BELKHAYAT",
+            "lastName": "ABDELWAHAB",
+            "category": "DH",
+            "plannigLeader": "amine tayia",
+            "userLeader": "youness douihry",
+            "crew": null,
+            "parada": "OUISLANE HAY NASR CAFE ASAFI",
+            "status": "inapt"
+        },
+        {
+            "matricule": 6001,
+            "name": "OUDADA",
+            "lastName": "AMAL",
+            "category": "DH",
+            "plannigLeader": "amine tayia",
+            "userLeader": "youness douihry",
+            "crew": null,
+            "parada": "SEBATA NIYABA",
+            "status": "available"
+        }
+    ]
+}

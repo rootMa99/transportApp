@@ -84,7 +84,7 @@ const CrewIndiData = (p) => {
                       ? { backgroundColor: "#393E41" }
                       : m.status === "inapt"
                       ? { backgroundColor: "#3D305F" }
-                      : m.status === "ctp"
+                      : m.status === "inactive"
                       ? { backgroundColor: "#02383C" }
                       : {}
                   }
@@ -113,7 +113,7 @@ const CrewIndiData = (p) => {
                       ? { backgroundColor: "#393E41" }
                       : m.status === "inapt"
                       ? { backgroundColor: "#3D305F" }
-                      : m.status === "ctp"
+                      : m.status === "inactive"
                       ? { backgroundColor: "#02383C" }
                       : {}
                   }
