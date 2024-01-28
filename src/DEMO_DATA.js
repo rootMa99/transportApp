@@ -1689,3 +1689,17 @@ export const PARADA_DATA=[
         "Adresse": "CHIKH LKAMEL"
     }
 ];
+
+
+export const USER=[
+    {
+        name:"amine tayia",
+        password:"9090",
+        role:"plaingLeader",
+    },
+    {
+        name:"lahcen",
+        password:"9099",
+        role:"root",
+    },
+]

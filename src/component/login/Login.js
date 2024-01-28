@@ -2,21 +2,37 @@ import { useDispatch } from "react-redux";
 import c from "./Login.module.css";
 import { dataSliceAction } from "../store/DataSlice";
 import { DEMO_DATA } from "../../DEMO_DATA";
-
+import { USER } from "../../DEMO_DATA";
+import { useState } from "react";
 
 const Login=p=>{
 
     const dispatch=useDispatch();
-
+    const [cred, setCred]= useState({name:"", pwd:""});
 
 
     const submitHandler=e=>{
         e.preventDefault();
-
-        dispatch(dataSliceAction.setLogin());
-        dispatch(dataSliceAction.setData(DEMO_DATA));
+        const index= USER.findIndex(f=>f.name===cred.name);
+        
+        console.log(cred, index, USER);
+        if(index===-1){
+          alert("no user found");
+        }else{
+          if(USER[index].password===cred.pwd){
+            dispatch(dataSliceAction.setLogin(USER[index].role));
+            dispatch(dataSliceAction.setData(DEMO_DATA));
+          }else{
+            alert("passWord incorrect");
+          }
+        }
     }
-
+    const userChange=e=>{
+      setCred(prev=>({...prev, name:e.target.value}));
+    }
+    const pwdChange=e=>{
+      setCred(prev=>({...prev, pwd:e.target.value}));
+    }
 
     return (
         <form className={c["Form-container"]} onSubmit={submitHandler}>
@@ -31,6 +47,7 @@ const Login=p=>{
               name="matricule"
               placeholder="User Name"
               className={c["username"]}
+              onChange={userChange}
             />
           </div>
     
@@ -40,7 +57,7 @@ const Login=p=>{
               name="password"
               placeholder="User Password"
               className={c["userpassword"]}
-
+              onChange={pwdChange}
             />
           </div>
     

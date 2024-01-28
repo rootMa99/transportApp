@@ -15,19 +15,22 @@ function App() {
   return (
     <div className="App">
       <NavBar />
-      {!isLoged ? (
+      {!isLoged.login ? (
         <Login />
-      ) : (
+      ) : isLoged.role === "plaingLeader" ? (
         <Suspense>
           <Routes>
             <Route index path="/" element={<Navigate replace to="/home" />} />
-            <Route exact path="/home" element={<Home data={data}/>} />
+            <Route exact path="/home" element={<Home data={data} />} />
             <Route exact path="/planning" element={<Planning />} />
-            <Route
-              exact
-              path="/assignTeamLeader"
-               
-            />
+            <Route exact path="/assignTeamLeader" />
+          </Routes>
+        </Suspense>
+      ) : (
+        <Suspense>
+          <Routes>
+            <Route index path="/" element={<Navigate replace to="/rootHome" />} />
+            <Route exact path="/rootHome" element={<Home data={data} />} />
           </Routes>
         </Suspense>
       )}
