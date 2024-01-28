@@ -2,6 +2,8 @@
   width: 80%;
   min-width: 30rem;
   min-height: 6rem;
+  max-height: 20rem;
+  overflow-y: auto;
   border: 1px solid #f84018;
   border-radius: 14px;
   padding: 1.5rem 1rem;
@@ -14,7 +16,19 @@
   gap: 1rem;
   margin-bottom: 1rem;
 }
-.title{
+.crewHolder::-webkit-scrollbar {
+  width: 4px;
+  background-color: #535151;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+.crewHolder::-webkit-scrollbar-thumb {
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #f84018;
+}
+.title {
   background-color: transparent;
   backdrop-filter: blur(2px);
   position: absolute;
@@ -31,17 +45,18 @@
   font-weight: bolder;
   color: #f8714f;
 }
-.matriculesh{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 1.5rem;
+.matriculesh {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
 }
 
-.table{
-    width: 97%;
+.table {
+  width: 97%;
+  max-height: 10rem;
   border-collapse: initial;
   border: 2px solid #f84018;
   border-radius: 20px;
@@ -49,48 +64,47 @@
   table-layout: fixed;
 }
 
-.paradaTable{
-    width: 30%;
+.paradaTable {
+  width: 30%;
 }
 .table th {
-    font-family: Formular, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-      "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-      "Segoe UI Symbol";
-    color: #f97d62;
-    text-align: center;
-    text-transform: uppercase;
-    padding: 10px;
-  }
-  .table td {
-    text-align: center;
-    padding: 8px;
-    padding-top: 10px;
-    color: #fdcec4;
-    text-transform: uppercase;
-    font-weight: 450;
-  }
-  .table th:first-of-type {
-    border-radius: 14px 0 0 0;
-  }
-  .table th:last-of-type {
-    border-radius: 0 14px 0 0;
-  }
-  .table tr {
-    background-color: #1f0602;
-  }
-  .table tr:nth-child(even) {
-    background-color: #4f1103;
-  }
-  .table th:first-of-type {
-    border-radius: 14px 0 0 0;
-  }
-  .table th:last-of-type {
-    border-radius: 0 14px 0 0;
-  }
-  .table tr:last-of-type td:last-of-type {
-    border-radius: 0 0 16px 0;
-  }
-  .table tr:last-of-type td:first-of-type {
-    border-radius: 0 0 0 14px;
-  }
-  
+  font-family: Formular, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
+  color: #f97d62;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 10px;
+}
+.table td {
+  text-align: center;
+  padding: 8px;
+  padding-top: 10px;
+  color: #fdcec4;
+  text-transform: uppercase;
+  font-weight: 450;
+}
+.table th:first-of-type {
+  border-radius: 14px 0 0 0;
+}
+.table th:last-of-type {
+  border-radius: 0 14px 0 0;
+}
+.table tr {
+  background-color: #1f0602;
+}
+.table tr:nth-child(even) {
+  background-color: #4f1103;
+}
+.table th:first-of-type {
+  border-radius: 14px 0 0 0;
+}
+.table th:last-of-type {
+  border-radius: 0 14px 0 0;
+}
+.table tr:last-of-type td:last-of-type {
+  border-radius: 0 0 16px 0;
+}
+.table tr:last-of-type td:first-of-type {
+  border-radius: 0 0 0 14px;
+}
