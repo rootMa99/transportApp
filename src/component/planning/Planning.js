@@ -15,6 +15,7 @@ import { useState } from "react";
 import Notification from "./Notification";
 import NotificationSubmit from "./NotificationSubmit";
 import { dataSliceAction } from "../store/DataSlice";
+import NotificationOk from "../home/NotificationOk";
 
 const Planning = (p) => {
   const { data } = useSelector((s) => s.datas);
@@ -40,6 +41,7 @@ const Planning = (p) => {
   });
   const [notify, setNotify] = useState({ rend: false, data: {} });
   const [notifyS, setNotifyS] = useState(false);
+  const [notifySC, setNotifySC] = useState(false);
   const [inactive, setInactive] = useState(
     data.filter((f) => f.status === "inactive")
   );
@@ -68,6 +70,7 @@ const Planning = (p) => {
     console.log(dataSubmit);
     dispatch(dataSliceAction.setPlannedData(dataSubmit));
     setNotifyS(false);
+    setNotifySC(true);
   };
   const cancelSubmit = (e) => {
     setNotifyS(false);
@@ -129,7 +132,7 @@ const Planning = (p) => {
       }
       if (targetId === "adminOne") {
         if (type === "crew") {
-          alert("Crew not allowed here. Please choose some shift for them");
+          alert("Crew is not allowed here. Please reassign them to another shift");
           return;
         }
         setAdmin((prev) => ({
@@ -139,7 +142,7 @@ const Planning = (p) => {
       }
       if (targetId === "adminTwo") {
         if (type === "crew") {
-          alert("Crew not allowed here. Please choose some shift for them");
+          alert("Crew is not allowed here. Please reassign them to another shift");
           return;
         }
         setAdmin((prev) => ({
@@ -265,7 +268,7 @@ const Planning = (p) => {
               ...prev,
               adminOne: [...prev.adminOne, ...selected],
             }))
-          : alert("not allowed!");
+          : alert("Crew is not allowed here. Please reassign them to another shift");
       }
       if (targetId === "adminTwo") {
         type === "indiv"
@@ -273,10 +276,16 @@ const Planning = (p) => {
               ...prev,
               adminTwo: [...prev.adminTwo, ...selected],
             }))
-          : alert("not allowed!");
+          : alert("Crew is not allowed here. Please reassign them to another shift");
       }
     }
   };
+
+  if (!notifySC) {
+    setTimeout(() => {
+      setNotifySC(false);
+    }, 6000);
+  }
 
   return (
     <div className={c.wrapper}>
@@ -284,6 +293,11 @@ const Planning = (p) => {
       {notify.rend && <Notification data={notify.data} click={clicknotify} />}
       {notifyS && (
         <NotificationSubmit click={submitclick} cancelSubmit={cancelSubmit} />
+      )}
+      {notifySC && (
+        <div className={c.notificationk}>
+          <NotificationOk />{" "}
+        </div>
       )}
       <div className={c.center}>
         <div className={c.content}>

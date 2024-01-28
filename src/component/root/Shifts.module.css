@@ -15,6 +15,12 @@
   gap: 1rem;
   margin-bottom: 1rem;
 }
+.modify{
+  width: 65%;
+     height: 20rem;
+     margin: auto;
+     margin-top: 1.5rem;
+}
 .tableHolder {
   width: 100%;
   max-height: 20rem;

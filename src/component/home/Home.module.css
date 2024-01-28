@@ -91,7 +91,7 @@
   font-weight: bolder;
 }
 
-/*Image*/
+
 .card-avatar {
   --size: 10rem;
   background:url("../../assets/amine.png"), linear-gradient(to bottom, #dd3d19 0%, #9b2910 100%) ;
@@ -104,7 +104,6 @@
   margin-bottom: 1rem;
 }
 
-/*Text*/
 .card-title {
   color: #333;
   font-size: 1.5em;
@@ -137,4 +136,12 @@
 
 .card-avatar:hover {
   transform: scale(1.1);
+}
+
+
+.notificationk{
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
 }

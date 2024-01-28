@@ -31,8 +31,8 @@ const Shifts = (p) => {
           </thead>
           <tbody>
             {p.data.length > 0 ? (
-              p.data.map((m) => (
-                <tr>
+              p.data.map((m,i) => (
+                <tr key={i}>
                   <td>{m.parada} </td>
                   <td className={c.matriculesh}>
                     {m.matricule.map((m) => (
