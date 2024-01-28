@@ -12,7 +12,7 @@ import RootHome from "./component/root/RootHome";
 function App() {
   const { isLoged, data, plannedData} = useSelector((s) => s.datas);
 
-  console.log(isLoged, data);
+  console.log(isLoged, data, plannedData);
 
   return (
     <div className="App">

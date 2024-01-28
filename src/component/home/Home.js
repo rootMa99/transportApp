@@ -24,7 +24,7 @@ const Home = (p) => {
           <div className={c["card-info"]}>
             <div className={c["card-avatar"]}></div>
             <div className={c["card-title"]}>amine tayia</div>
-            <div className={c["card-subtitle"]}>plaing Leader</div>
+            <div className={c["card-subtitle"]}>planning Leader</div>
           </div>
         </div>
         <div className={c.content}>

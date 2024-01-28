@@ -49,9 +49,9 @@
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
-  justify-content: space-around;
-  align-items: center;
   min-height: 10rem;
+  align-items: stretch;
+  justify-content: space-evenly;
 }
 .center {
   width: 100%;
@@ -59,10 +59,10 @@
 }
 
 .card {
-  width: 190px;
-  height: 200px;
+  width: 12.5rem;
+  height: 14rem;
   background: #9b2910;
-  padding: 2rem 1.5rem;
+  padding: 3rem 1.5rem;
   transition: box-shadow 0.3s ease, transform 0.2s ease;
   display: flex;
   justify-content: center;
@@ -88,10 +88,11 @@
   font-weight: bolder;
 }
 
-/*Image*/
 .card-avatar {
-  --size: 100px;
-  background: linear-gradient(to top, #f1e1c1 0%, #fcbc97 100%);
+  --size: 10rem;
+  background: url("../../assets/avatarunkown.png"), linear-gradient(to bottom, #dd3d19 0%, #9b2910 100%);
+  background-size: cover;
+  background-position: center;
   width: var(--size);
   height: var(--size);
   border-radius: 50%;
@@ -99,7 +100,6 @@
   margin-bottom: 1rem;
 }
 
-/*Text*/
 .card-title {
   color: #333;
   font-size: 1.5em;

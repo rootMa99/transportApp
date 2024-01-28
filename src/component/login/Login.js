@@ -1,7 +1,7 @@
 import { useDispatch } from "react-redux";
 import c from "./Login.module.css";
 import { dataSliceAction } from "../store/DataSlice";
-import { DEMO_DATA, PLANNEDDATA } from "../../DEMO_DATA";
+import { DEMO_DATA } from "../../DEMO_DATA";
 import { USER } from "../../DEMO_DATA";
 import { useState } from "react";
 
@@ -21,8 +21,8 @@ const Login = (p) => {
         dispatch(dataSliceAction.setLogin(USER[index].role));
 
         USER[index].role !== "root"
-          ? dispatch(dataSliceAction.setData(DEMO_DATA))
-          : dispatch(dataSliceAction.setPlannedData(PLANNEDDATA));
+          && dispatch(dataSliceAction.setData(DEMO_DATA))
+          // : dispatch(dataSliceAction.setPlannedData(PLANNEDDATA));
       } else {
         alert("passWord incorrect");
       }

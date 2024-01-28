@@ -68,7 +68,7 @@ const CrewIndiData = (p) => {
             <th>last name</th>
             <th>category</th>
             <th>crew</th>
-            <th>plannig Leader</th>
+            <th>planning Leader</th>
             <th>team Leader</th>
             <th>parada</th>
             <th>status</th>
