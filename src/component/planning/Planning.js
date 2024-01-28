@@ -13,6 +13,8 @@ import inact from "../../assets/inact.png";
 import { getCrewsfilter, getIndivFilter } from "../hooks/getCrews";
 import { useState } from "react";
 import Notification from "./Notification";
+import NotificationSubmit from "./NotificationSubmit";
+import { dataSliceAction } from "../store/DataSlice";
 
 const Planning = (p) => {
   const { data } = useSelector((s) => s.datas);
@@ -37,6 +39,7 @@ const Planning = (p) => {
     adminTwo: [],
   });
   const [notify, setNotify] = useState({ rend: false, data: {} });
+  const [notifyS, setNotifyS] = useState(false);
   const [inactive, setInactive] = useState(
     data.filter((f) => f.status === "inactive")
   );
@@ -63,6 +66,11 @@ const Planning = (p) => {
       adminTwo: admin.adminTwo,
     };
     console.log(dataSubmit);
+    dispatch(dataSliceAction.setPlannedData(dataSubmit));
+    setNotifyS(false);
+  };
+  const cancelSubmit = (e) => {
+    setNotifyS(false);
   };
 
   const sicknessData = data.filter((f) => f.status === "infirmity");
@@ -274,6 +282,9 @@ const Planning = (p) => {
     <div className={c.wrapper}>
       {notify.rend && <BackDrop />}
       {notify.rend && <Notification data={notify.data} click={clicknotify} />}
+      {notifyS && (
+        <NotificationSubmit click={submitclick} cancelSubmit={cancelSubmit} />
+      )}
       <div className={c.center}>
         <div className={c.content}>
           <div
@@ -525,7 +536,7 @@ const Planning = (p) => {
         </div>
       </div>
       <div className={cs.btnHolder}>
-        <button onClick={submitclick}>
+        <button onClick={() => setNotifyS(true)}>
           <span>submit</span>
         </button>
       </div>

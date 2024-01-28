@@ -32,13 +32,17 @@
   padding: 5px;
   border-radius: 10px;
 }
-.btnHolder {
+.btnHolder,.btnHolderS {
   width: 100%;
   display: flex;
   justify-content: space-around;
   margin-top: 3rem;
 }
-.btnHolder button {
+.btnHolderS{
+  width: 70%;
+  margin-left: auto;
+}
+.btnHolder button, .btnHolderS button {
     width: 30%;
   outline: none;
   cursor: pointer;
@@ -57,8 +61,16 @@
   background: #f84018;
   color: ghostwhite;
 }
+.btnHolderS button:last-of-type{
+width: 60%;
+background: rgb(167, 167, 241);
+}
+.btnHolderS button:first-of-type{
+background: rgb(250, 3, 3);
+}
 
-.btnHolder button span {
+
+.btnHolder button span, .btnHolderS button span {
   position: relative;
   z-index: 10;
   transition: color 0.4s;
@@ -70,7 +82,9 @@
 }
 
 .btnHolder button::before,
-.btnHolder button::after {
+.btnHolder button::after,
+.btnHolderS button::before,
+.btnHolderS button::after {
   position: absolute;
   top: 0;
   left: 0;
@@ -79,7 +93,8 @@
   z-index: 0;
 }
 
-.btnHolder button::before {
+.btnHolder button::before,
+.btnHolderS button::before {
   content: "";
   background: #f97d62;
   width: 120%;
@@ -87,8 +102,15 @@
   transform: skew(30deg);
   transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
 }
+.btnHolderS button:first-child::before{
+  background: #da1313;
+}
+.btnHolderS button:last-child::before{
+  background: #6c6283;
+}
 
-.btnHolder button:hover::before {
+.btnHolder button:hover::before,
+.btnHolderS button:hover::before {
   transform: translate3d(100%, 0, 0);
 }
 

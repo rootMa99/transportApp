@@ -11,14 +11,16 @@ const DataSlice = createSlice({
   },
   reducers: {
     setPlannedData(s,p){
-      s.plannedData(p.payload)
+      if(s.plannedData.length===0){
+        s.plannedData.push(p.payload);
+      }
     },
     setLogin(s, p) {
       s.isLoged.login = true;
       s.isLoged.role = p.payload
     },
     setLogOut(s, p) {
-      s.isLoged = false;
+      s.isLoged = { login: false, role: "" };
       s.data = [];
     },
     setData(s, p) {
