@@ -7,6 +7,7 @@ import { Navigate, Route, Routes } from "react-router-dom";
 import Home from "./component/home/Home";
 import Planning from "./component/planning/Planning";
 import NotificationSubmit from "./component/planning/NotificationSubmit";
+import RootHome from "./component/root/RootHome";
 
 function App() {
   const { isLoged, data, plannedData} = useSelector((s) => s.datas);
@@ -32,7 +33,7 @@ function App() {
         <Suspense>
           <Routes>
             <Route index path="/" element={<Navigate replace to="/rootHome" />} />
-            <Route exact path="/rootHome" element={<Home data={plannedData} />} />
+            <Route exact path="/rootHome" element={<RootHome data={plannedData} />} />
             <Route path="*" element={<Navigate replace to="/rootHome" />} />
           </Routes>
         </Suspense>

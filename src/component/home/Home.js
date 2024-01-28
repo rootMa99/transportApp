@@ -20,6 +20,13 @@ const Home = (p) => {
         <h1 className={c.slogan}>
           Together On Time: <span>Get teams there quicker, together.</span>
         </h1>
+        <div className={c["card"]}>
+          <div className={c["card-info"]}>
+            <div className={c["card-avatar"]}></div>
+            <div className={c["card-title"]}>amine tayia</div>
+            <div className={c["card-subtitle"]}>plaing Leader</div>
+          </div>
+        </div>
         <div className={c.content}>
           <Crews data={data} title="crews" setDataSelected={getSelectedData} />
           <Crews
