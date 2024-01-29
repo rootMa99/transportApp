@@ -142,7 +142,7 @@ const RootHome = (p) => {
           <div className={c["card-info"]}>
             <div className={c["card-avatar"]}>
             </div>
-            <div className={c["card-title"]}>Lahcen transport</div>
+            <div className={c["card-title"]}>Lahcen habaz</div>
             <div className={c["card-subtitle"]}>ROOT &amp; transport agent</div>
           </div>
         </div>
