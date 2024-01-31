@@ -154,8 +154,8 @@ const RootHome = (p) => {
           <Shifts title={"morning"} data={morning} />
           <Shifts title={"evening"} data={evening} />
           <Shifts title={"night"} data={night} />
-          <Shifts title={"admine one"} data={adminOne} />
-          <Shifts title={"admine two"} data={adminTwo} />
+          <Shifts title={"admin one"} data={adminOne} />
+          <Shifts title={"admin  two"} data={adminTwo} />
         </div>
       </div>
     </div>
