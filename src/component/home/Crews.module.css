@@ -1,21 +1,53 @@
+.depa, .depas{
+  width: 45%;
+  position: relative;
+
+}
+.depas{
+  width: 32%;
+}
+
 .crewHolder,
 .crewHolderP,
 .crewHolderPSh,
 .crewHolderPs {
-  width: 45%;
   min-width: 30rem;
   min-height: 6rem;
   border: 1px solid #f84018;
   border-radius: 14px;
   padding: 1.5rem 1rem;
   background-color: #4f1202;
-  position: relative;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   gap: 1rem;
 }
+
+.crewHolder,.crewHolderP{
+  max-height: 20rem;
+  overflow-y: auto;
+}
+.crewHolder{
+  margin-bottom: 2rem;
+}
+
+.crewHolder::-webkit-scrollbar ,
+.crewHolderP::-webkit-scrollbar {
+  width: 4px;
+  background-color: #535151;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+.crewHolder::-webkit-scrollbar-thumb,
+.crewHolderP::-webkit-scrollbar-thumb {
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #f84018;
+}
+
+
 .crewHolderPSh{
   width: 95%;
   min-height: 10rem;
@@ -40,7 +72,7 @@
   background-color:#8b1f04;
 }
 .crewHolderInfi{
-  width: 45%;
+  width: 95%;
   background-color:#121516;
   margin: auto;
   margin-top: 2rem;
@@ -58,6 +90,7 @@
   padding-inline: 0.5rem;
 }
 .titless{
+  top: 0.5rem;
   left: 3.5rem;
 }
 .img, .imgs{
@@ -144,6 +177,7 @@
 .imgIn{
   width: 4rem;
   left: -0.5rem;
+  top: 0;
 }
 
 .btnHolder {
@@ -205,3 +239,10 @@
 .btnHolder button:hover::before {
   transform: translate3d(100%, 0, 0);
 }
+.crewHolderPsNd{
+  width: 93%;
+  }
+
+  .crewHolderPSh{
+    position: relative;
+  }

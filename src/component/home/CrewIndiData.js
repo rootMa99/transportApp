@@ -60,6 +60,9 @@ const CrewIndiData = (p) => {
           onChange={changeHandler}
         />
       )}
+      {
+        datac.status === "crews"&&<h1 className={c.nbp} >nb° employee: {data.length} </h1>
+      }
       <table className={`${c.table}`}>
         <thead>
           <tr style={{ backgroundColor: "#761904" }}>

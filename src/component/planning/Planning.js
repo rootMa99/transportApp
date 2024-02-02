@@ -132,7 +132,9 @@ const Planning = (p) => {
       }
       if (targetId === "adminOne") {
         if (type === "crew") {
-          alert("Crew is not allowed here. Please reassign them to another shift");
+          alert(
+            "Crew is not allowed here. Please reassign them to another shift"
+          );
           return;
         }
         setAdmin((prev) => ({
@@ -142,7 +144,9 @@ const Planning = (p) => {
       }
       if (targetId === "adminTwo") {
         if (type === "crew") {
-          alert("Crew is not allowed here. Please reassign them to another shift");
+          alert(
+            "Crew is not allowed here. Please reassign them to another shift"
+          );
           return;
         }
         setAdmin((prev) => ({
@@ -268,7 +272,9 @@ const Planning = (p) => {
               ...prev,
               adminOne: [...prev.adminOne, ...selected],
             }))
-          : alert("Crew is not allowed here. Please reassign them to another shift");
+          : alert(
+              "Crew is not allowed here. Please reassign them to another shift"
+            );
       }
       if (targetId === "adminTwo") {
         type === "indiv"
@@ -276,7 +282,9 @@ const Planning = (p) => {
               ...prev,
               adminTwo: [...prev.adminTwo, ...selected],
             }))
-          : alert("Crew is not allowed here. Please reassign them to another shift");
+          : alert(
+              "Crew is not allowed here. Please reassign them to another shift"
+            );
       }
     }
   };
@@ -301,251 +309,285 @@ const Planning = (p) => {
       )}
       <div className={c.center}>
         <div className={c.content}>
-          <div
-            className={`${cs.crewHolderPs} ${cs.crewHolderInfi} ${cs.crewHolderP}`}
-            // onDragOver={handleDragOver}
-            // onDrop={(e) => handleDrop(e, "night")}
-          >
-            <h1 className={cs.titless}>infirmity</h1>
+          <div className={cs.depa}>
+            <div
+              className={`${cs.crewHolderPs} ${cs.crewHolderInfi} ${cs.crewHolderP}`}
+              // onDragOver={handleDragOver}
+              // onDrop={(e) => handleDrop(e, "night")}
+            >
+              <h1 className={cs.titless}>infirmity</h1>
 
-            <img src={hos} alt="mor" className={cs.imgsh} draggable={false} />
-            {sicknessData.length > 0 ? (
-              sicknessData.map((m, i) => (
-                <span key={i} style={{ cursor: "pointer" }}>
-                  {m.matricule}
-                </span>
-              ))
-            ) : (
-              <h1 className={cs.notFound}>NO Item</h1>
-            )}
+              <img src={hos} alt="mor" className={cs.imgsh} draggable={false} />
+              {sicknessData.length > 0 ? (
+                sicknessData.map((m, i) => (
+                  <span key={i} style={{ cursor: "pointer" }}>
+                    {m.matricule}
+                  </span>
+                ))
+              ) : (
+                <h1 className={cs.notFound}>NO Item</h1>
+              )}
+            </div>
           </div>
-          <div
-            className={`${cs.crewHolderPs} ${cs.crewHolderInfi} ${cs.crewHolderP}`}
-            // onDragOver={handleDragOver}
-            // onDrop={(e) => handleDrop(e, "night")}
-          >
-            <img
-              src={inact}
-              alt="mor"
-              className={`${cs.img} ${cs.imgIn}`}
-              draggable={false}
-            />
+          <div className={cs.depa}>
+            <div
+              className={`${cs.crewHolderPs} ${cs.crewHolderInfi} ${cs.crewHolderP}`}
+              // onDragOver={handleDragOver}
+              // onDrop={(e) => handleDrop(e, "night")}
+            >
+              <img
+                src={inact}
+                alt="mor"
+                className={`${cs.img} ${cs.imgIn}`}
+                draggable={false}
+              />
 
-            <h1 className={cs.titless}>inactive</h1>
-            {inactive.length > 0 ? (
-              inactive.map((m, i) => (
-                <span key={i} style={{ cursor: "pointer" }}>
-                  {m.matricule}
-                </span>
-              ))
-            ) : (
-              <h1 className={cs.notFound}>NO Item</h1>
-            )}
+              <h1 className={cs.titless}>inactive</h1>
+              {inactive.length > 0 ? (
+                inactive.map((m, i) => (
+                  <span key={i} style={{ cursor: "pointer" }}>
+                    {m.matricule}
+                  </span>
+                ))
+              ) : (
+                <h1 className={cs.notFound}>NO Item</h1>
+              )}
+            </div>
           </div>
         </div>
-
         <div className={c.content}>
-          <div className={cs.crewHolderP}>
-            <h1 className={cs.title}>crews</h1>
-            {crews.length > 0 ? (
-              crews.map((m, i) => (
-                <span
-                  key={i}
-                  draggable
-                  onDragStart={(e) => handleDragStart(e, m.crewName, "crew")}
-                >
-                  {m.crewName}
-                </span>
-              ))
-            ) : (
-              <h1 className={cs.notFound}>no crews found </h1>
-            )}
+          <div className={cs.depa}>
+            <div className={cs.crewHolderP}>
+              <h1 className={cs.title}>crews</h1>
+              {crews.length > 0 ? (
+                crews.map((m, i) => (
+                  <span
+                    key={i}
+                    draggable
+                    onDragStart={(e) => handleDragStart(e, m.crewName, "crew")}
+                  >
+                    {m.crewName}
+                  </span>
+                ))
+              ) : (
+                <h1 className={cs.notFound}>no crews found </h1>
+              )}
+            </div>
           </div>
-          <div className={cs.crewHolderP}>
-            <h1 className={cs.title}>individuals</h1>
-            {individuals.length > 0 ? (
-              individuals.map((m, i) => (
-                <span
-                  key={i}
-                  draggable
-                  onDragStart={(e) => handleDragStart(e, m.matricule, "indiv")}
-                >
-                  {m.matricule}
-                </span>
-              ))
-            ) : (
-              <h1 className={cs.notFound}>no crews found </h1>
-            )}
+          <div className={cs.depa}>
+            <div className={cs.crewHolderP}>
+              <h1 className={cs.title}>individuals</h1>
+              {individuals.length > 0 ? (
+                individuals.map((m, i) => (
+                  <span
+                    key={i}
+                    draggable
+                    onDragStart={(e) =>
+                      handleDragStart(e, m.matricule, "indiv")
+                    }
+                  >
+                    {m.matricule}
+                  </span>
+                ))
+              ) : (
+                <h1 className={cs.notFound}>no crews found </h1>
+              )}
+            </div>
           </div>
         </div>
         <div className={cs.crewHolderPSh}>
           <h1 className={cs.titles}>Shifts</h1>
-          <div
-            className={`${cs.crewHolderPs} ${cs.crewHolderPsM} ${cs.crewHolderP}`}
-            onDragOver={handleDragOver}
-            onDrop={(e) => handleDrop(e, "morning")}
-          >
-            <img src={morning} alt="mor" className={cs.img} draggable={false} />
-            {/* <h1 className={cs.titler}>morning</h1> */}
+          <div className={cs.depas}>
+            <div
+              className={`${cs.crewHolderPs} ${cs.crewHolderPsM} ${cs.crewHolderP} ${cs.crewHolderPsNd}`}
+              onDragOver={handleDragOver}
+              onDrop={(e) => handleDrop(e, "morning")}
+            >
+              <img
+                src={morning}
+                alt="mor"
+                className={cs.img}
+                draggable={false}
+              />
+              {/* <h1 className={cs.titler}>morning</h1> */}
 
-            {mor.length === 0 ? (
-              <h1 className={cs.notFound}>NO Item</h1>
-            ) : (
-              mor.map((m, i) =>
-                m.hasOwnProperty("crewName") ? (
-                  <span
-                    key={i}
-                    draggable
-                    onDragStart={(e) =>
-                      handleDragStart(e, m.crewName, "crew", "morning")
-                    }
-                  >
-                    {m.crewName}
-                  </span>
-                ) : (
-                  <span
-                    key={i}
-                    draggable
-                    onDragStart={(e) =>
-                      handleDragStart(e, m.matricule, "indiv", "morning")
-                    }
-                  >
-                    {m.matricule}
-                  </span>
+              {mor.length === 0 ? (
+                <h1 className={cs.notFound}>NO Item</h1>
+              ) : (
+                mor.map((m, i) =>
+                  m.hasOwnProperty("crewName") ? (
+                    <span
+                      key={i}
+                      draggable
+                      onDragStart={(e) =>
+                        handleDragStart(e, m.crewName, "crew", "morning")
+                      }
+                    >
+                      {m.crewName}
+                    </span>
+                  ) : (
+                    <span
+                      key={i}
+                      draggable
+                      onDragStart={(e) =>
+                        handleDragStart(e, m.matricule, "indiv", "morning")
+                      }
+                    >
+                      {m.matricule}
+                    </span>
+                  )
                 )
-              )
-            )}
+              )}
+            </div>
           </div>
-          <div
-            className={`${cs.crewHolderPs} ${cs.crewHolderPsE} ${cs.crewHolderP}`}
-            onDragOver={handleDragOver}
-            onDrop={(e) => handleDrop(e, "evening")}
-          >
-            <img
-              src={eveningpic}
-              alt="mor"
-              className={cs.img}
-              draggable={false}
-            />
-            {/* <h1 className={cs.titler}>evening</h1> */}
+          <div className={cs.depas}>
+            <div
+              className={`${cs.crewHolderPs} ${cs.crewHolderPsE} ${cs.crewHolderP} ${cs.crewHolderPsNd}`}
+              onDragOver={handleDragOver}
+              onDrop={(e) => handleDrop(e, "evening")}
+            >
+              <img
+                src={eveningpic}
+                alt="mor"
+                className={cs.img}
+                draggable={false}
+              />
+              {/* <h1 className={cs.titler}>evening</h1> */}
 
-            {evening.length === 0 ? (
-              <h1 className={cs.notFound}>NO Item</h1>
-            ) : (
-              evening.map((m, i) =>
-                m.hasOwnProperty("crewName") ? (
-                  <span
-                    key={i}
-                    draggable
-                    onDragStart={(e) =>
-                      handleDragStart(e, m.crewName, "crew", "evening")
-                    }
-                  >
-                    {m.crewName}
-                  </span>
-                ) : (
-                  <span
-                    key={i}
-                    draggable
-                    onDragStart={(e) =>
-                      handleDragStart(e, m.matricule, "indiv", "evening")
-                    }
-                  >
-                    {m.matricule}
-                  </span>
+              {evening.length === 0 ? (
+                <h1 className={cs.notFound}>NO Item</h1>
+              ) : (
+                evening.map((m, i) =>
+                  m.hasOwnProperty("crewName") ? (
+                    <span
+                      key={i}
+                      draggable
+                      onDragStart={(e) =>
+                        handleDragStart(e, m.crewName, "crew", "evening")
+                      }
+                    >
+                      {m.crewName}
+                    </span>
+                  ) : (
+                    <span
+                      key={i}
+                      draggable
+                      onDragStart={(e) =>
+                        handleDragStart(e, m.matricule, "indiv", "evening")
+                      }
+                    >
+                      {m.matricule}
+                    </span>
+                  )
                 )
-              )
-            )}
+              )}
+            </div>
           </div>
-          <div
-            className={`${cs.crewHolderPs} ${cs.crewHolderPsN} ${cs.crewHolderP}`}
-            onDragOver={handleDragOver}
-            onDrop={(e) => handleDrop(e, "night")}
-          >
-            <img
-              src={nightPic}
-              alt="mor"
-              className={cs.img}
-              draggable={false}
-            />
-            {/* <h1 className={cs.titler}>night</h1> */}
+          <div className={cs.depas}>
+            <div
+              className={`${cs.crewHolderPs} ${cs.crewHolderPsN} ${cs.crewHolderP} ${cs.crewHolderPsNd}`}
+              onDragOver={handleDragOver}
+              onDrop={(e) => handleDrop(e, "night")}
+            >
+              <img
+                src={nightPic}
+                alt="mor"
+                className={cs.img}
+                draggable={false}
+              />
+              {/* <h1 className={cs.titler}>night</h1> */}
 
-            {night.length === 0 ? (
-              <h1 className={cs.notFound}>NO Item</h1>
-            ) : (
-              night.map((m, i) =>
-                m.hasOwnProperty("crewName") ? (
-                  <span
-                    key={i}
-                    draggable
-                    onDragStart={(e) =>
-                      handleDragStart(e, m.crewName, "crew", "night")
-                    }
-                  >
-                    {m.crewName}
-                  </span>
-                ) : (
-                  <span
-                    key={i}
-                    draggable
-                    onDragStart={(e) =>
-                      handleDragStart(e, m.matricule, "indiv", "night")
-                    }
-                  >
-                    {m.matricule}
-                  </span>
+              {night.length === 0 ? (
+                <h1 className={cs.notFound}>NO Item</h1>
+              ) : (
+                night.map((m, i) =>
+                  m.hasOwnProperty("crewName") ? (
+                    <span
+                      key={i}
+                      draggable
+                      onDragStart={(e) =>
+                        handleDragStart(e, m.crewName, "crew", "night")
+                      }
+                    >
+                      {m.crewName}
+                    </span>
+                  ) : (
+                    <span
+                      key={i}
+                      draggable
+                      onDragStart={(e) =>
+                        handleDragStart(e, m.matricule, "indiv", "night")
+                      }
+                    >
+                      {m.matricule}
+                    </span>
+                  )
                 )
-              )
-            )}
+              )}
+            </div>
           </div>
         </div>
         <div className={cs.crewHolderPSh}>
           <h1 className={cs.titles}>Admin</h1>
-          <div
-            className={`${cs.crewHolderPs} ${cs.crewHolderAdmin} ${cs.crewHolderP}`}
-            onDragOver={handleDragOver}
-            onDrop={(e) => handleDrop(e, "adminOne")}
-          >
-            <img src={enAm} alt="mor" className={cs.imgs} draggable={false} />
-            <img src={enpm} alt="mor" className={cs.imgss} draggable={false} />
-            {admin.adminOne.length === 0 ? (
-              <h1 className={cs.notFound}>NO Item</h1>
-            ) : (
-              admin.adminOne.map((m, i) => (
-                <span
-                  key={i}
-                  draggable
-                  onDragStart={(e) =>
-                    handleDragStart(e, m.matricule, "indiv", "adminOne")
-                  }
-                >
-                  {m.matricule}
-                </span>
-              ))
-            )}
+          <div className={cs.depas}>
+            <div
+              className={`${cs.crewHolderPs} ${cs.crewHolderAdmin} ${cs.crewHolderP} ${cs.crewHolderPsNd}`}
+              onDragOver={handleDragOver}
+              onDrop={(e) => handleDrop(e, "adminOne")}
+            >
+              <img src={enAm} alt="mor" className={cs.imgs} draggable={false} />
+              <img
+                src={enpm}
+                alt="mor"
+                className={cs.imgss}
+                draggable={false}
+              />
+              {admin.adminOne.length === 0 ? (
+                <h1 className={cs.notFound}>NO Item</h1>
+              ) : (
+                admin.adminOne.map((m, i) => (
+                  <span
+                    key={i}
+                    draggable
+                    onDragStart={(e) =>
+                      handleDragStart(e, m.matricule, "indiv", "adminOne")
+                    }
+                  >
+                    {m.matricule}
+                  </span>
+                ))
+              )}
+            </div>
           </div>
-          <div
-            className={`${cs.crewHolderPs} ${cs.crewHolderAdmin} ${cs.crewHolderP}`}
-            onDragOver={handleDragOver}
-            onDrop={(e) => handleDrop(e, "adminTwo")}
-          >
-            <img src={enAm} alt="mor" className={cs.imgs} draggable={false} />
-            <img src={enpmt} alt="mor" className={cs.imgss} draggable={false} />
-            {admin.adminTwo.length === 0 ? (
-              <h1 className={cs.notFound}>NO Item</h1>
-            ) : (
-              admin.adminTwo.map((m, i) => (
-                <span
-                  key={i}
-                  draggable
-                  onDragStart={(e) =>
-                    handleDragStart(e, m.matricule, "indiv", "adminTwo")
-                  }
-                >
-                  {m.matricule}
-                </span>
-              ))
-            )}
+          <div className={cs.depas}>
+            <div
+              className={`${cs.crewHolderPs} ${cs.crewHolderAdmin} ${cs.crewHolderP} ${cs.crewHolderPsNd}`}
+              onDragOver={handleDragOver}
+              onDrop={(e) => handleDrop(e, "adminTwo")}
+            >
+              <img src={enAm} alt="mor" className={cs.imgs} draggable={false} />
+              <img
+                src={enpmt}
+                alt="mor"
+                className={cs.imgss}
+                draggable={false}
+              />
+              {admin.adminTwo.length === 0 ? (
+                <h1 className={cs.notFound}>NO Item</h1>
+              ) : (
+                admin.adminTwo.map((m, i) => (
+                  <span
+                    key={i}
+                    draggable
+                    onDragStart={(e) =>
+                      handleDragStart(e, m.matricule, "indiv", "adminTwo")
+                    }
+                  >
+                    {m.matricule}
+                  </span>
+                ))
+              )}
+            </div>
           </div>
         </div>
       </div>

@@ -12,7 +12,7 @@ const Home = (p) => {
     setSelectedData(false);
     setTimeout(()=>setSelectedData(true), 100);
   };
-  console.log(selectedData);
+  console.log(selectedData, data);
 
   return (
     <div className={c.wrapper}>
