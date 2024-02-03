@@ -12,6 +12,7 @@ const CrewIndiData = (p) => {
   const [data, setData] = useState(
     datac.status === "crews" && datac.data[0].employee
   );
+  const [addEmp, setAddEmp] = useState({ addE: false, showL: true });
   const [changePar, setChangePar] = useState(false);
   const [matricule, setMatricule] = useState(null);
   const [inputValue, setInputValue] = useState("");
@@ -39,6 +40,7 @@ const CrewIndiData = (p) => {
     setChangePar(false);
   };
 
+
   return (
     <div className={c.holder}>
       {changePar && (
@@ -50,6 +52,18 @@ const CrewIndiData = (p) => {
       )}
       {changePar && <BackDrop />}
       <h1 className={c.title}>{datac.name} Details </h1>
+      <button
+        className={c.buttonEmL}
+        style={addEmp.showL ? { backgroundColor: "white" } : {}}
+      >
+        crew list
+      </button>
+      <button
+        className={c.buttonEm}
+        style={addEmp.addE ? { backgroundColor: "white" } : {}}
+      >
+        Add employee
+      </button>
       {datac.status === "crews" && (
         <input
           className={c.input}
@@ -60,9 +74,9 @@ const CrewIndiData = (p) => {
           onChange={changeHandler}
         />
       )}
-      {
-        datac.status === "crews"&&<h1 className={c.nbp} >nb° employee: {data.length} </h1>
-      }
+      {datac.status === "crews" && (
+        <h1 className={c.nbp}>nb° employee: {data.length} </h1>
+      )}
       <table className={`${c.table}`}>
         <thead>
           <tr style={{ backgroundColor: "#761904" }}>
@@ -134,7 +148,7 @@ const CrewIndiData = (p) => {
                   >
                     {m.parada}
                   </td>
-                  <td>{m.status}</td>
+                  <td className={c.spec}>{m.status}</td>
                 </tr>
               ))}
         </tbody>

@@ -100,23 +100,56 @@
   color: #fdcec4;
   text-align: center;
 }
-::placeholder, .nbp {
+::placeholder,
+.nbp {
   color: #fdcec4;
   font-family: Formular, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
     "Segoe UI Symbol";
-  }
-
-.input:focus, .input:hover {
-  outline-offset: 5px;
-  background-color: #F33716;
-transform: scaleY(1.2);
 }
-.nbp{
+
+.input:focus,
+.input:hover {
+  outline-offset: 5px;
+  background-color: #f33716;
+  transform: scaleY(1.2);
+}
+.nbp {
   color: #f87d61;
   position: absolute;
   top: 3rem;
   right: 3rem;
   font-size: larger;
   text-transform: uppercase;
+}
+
+.buttonEm,
+.buttonEmL {
+  position: absolute;
+  top: 3rem;
+  left: 9rem;
+  color: #f87d61;
+  font-family: Formular, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  border: 1px solid #fc380c;
+  background-color: black;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: small;
+  margin: 0;
+}
+
+.buttonEmL {
+  left: 3rem;
+}
+
+.buttonEm:hover,
+.buttonEmL:hover {
+  color: #f3baae;
+  background-color: rgb(68, 32, 15);
+  transform: scale(1.01);
 }
