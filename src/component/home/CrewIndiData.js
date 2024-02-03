@@ -41,6 +41,7 @@ const CrewIndiData = (p) => {
   };
 
 
+
   return (
     <div className={c.holder}>
       {changePar && (
@@ -55,12 +56,14 @@ const CrewIndiData = (p) => {
       <button
         className={c.buttonEmL}
         style={addEmp.showL ? { backgroundColor: "white" } : {}}
+        onClick={e=>setAddEmp({ addE: false, showL: true })}
       >
         crew list
       </button>
       <button
         className={c.buttonEm}
         style={addEmp.addE ? { backgroundColor: "white" } : {}}
+        onClick={e=>setAddEmp({ addE: true, showL: false })}
       >
         Add employee
       </button>
