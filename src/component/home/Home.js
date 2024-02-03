@@ -2,17 +2,23 @@ import { useSelector } from "react-redux";
 import c from "./Home.module.css";
 import Crews from "./Crews";
 import CrewIndiData from "./CrewIndiData";
-import { useState } from "react";
+import { useRef, useState } from "react";
 
 const Home = (p) => {
   const { data } = useSelector((s) => s.datas);
   const [selectedData, setSelectedData] = useState(false);
+  const scrollRef = useRef(null);
 
   const getSelectedData = () => {
     setSelectedData(false);
-    setTimeout(()=>setSelectedData(true), 100);
+    setTimeout(() => {
+      setSelectedData(true);
+    }, 50);
+    setTimeout(() => {
+      scrollRef.current.scrollIntoView({ behavior: 'smooth' });
+    }, 150);
   };
-  console.log(selectedData,data);
+  console.log(selectedData, data);
 
   return (
     <div className={c.wrapper}>
@@ -35,7 +41,11 @@ const Home = (p) => {
             setDataSelected={getSelectedData}
           />
         </div>
-        {selectedData && <CrewIndiData data={data}  setDataSelected={getSelectedData}/>}
+        <div ref={scrollRef}>
+          {selectedData && (
+            <CrewIndiData data={data} setDataSelected={getSelectedData} />
+          )}
+        </div>
       </div>
     </div>
   );
